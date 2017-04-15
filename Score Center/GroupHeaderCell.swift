@@ -14,10 +14,12 @@ class GroupHeaderCell: UITableViewCell {
     @IBOutlet weak var totalPointsLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    class var cellHeight : CGFloat { get { return 145 } }
     
     var group : Group? {
         didSet {
             updateUI()
+            selectionStyle = .none
         }
     }
     
