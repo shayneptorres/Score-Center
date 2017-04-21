@@ -25,6 +25,7 @@ class AddObjectViewController: UIViewController {
     var delegate : AddObjectDelegate?
     var addObjectValue = AddObjectValue.group
     var group : Group?
+    var team : Team?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +50,10 @@ class AddObjectViewController: UIViewController {
             newGroup.save()
         case .team:
             var newTeam = Team()
+            newTeam.name = objectNameTextField.text!
             newTeam.autoincrementID()
-            newTeam.updatedAt = Date.timeStamp()
             group?.add(team: newTeam)
+            UserDefaults.standard.setValue(true, forKey: Update.groupsUpdated.rawValue)
             break
         }
         self.dismiss(animated: true, completion: {

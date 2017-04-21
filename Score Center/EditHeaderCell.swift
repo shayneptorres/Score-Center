@@ -37,8 +37,7 @@ class EditHeaderCell: UITableViewCell {
             group.name = groupNameTextField.text!
             group.desc = descriptionTextArea.text
         }
-        let def = UserDefaults.standard
-        def.setValue(true, forKey: Update.groupsUpdated.rawValue)
+        UserDefaults.standard.setValue(true, forKey: Update.groupsUpdated.rawValue)
         delegate.showDisplayMode()
     }
     

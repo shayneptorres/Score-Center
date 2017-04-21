@@ -41,6 +41,7 @@ class GroupsViewController: UIViewController {
         }
         if groupsUpdated {
             reloadData()
+            UserDefaults.standard.setValue(false, forKey: Update.groupsUpdated.rawValue)
         }
     }
     

@@ -17,7 +17,6 @@ class Team: Object, RealmManagable {
     dynamic var score = Double()
     dynamic var ranking = Int()
     dynamic var parentGroup : Group? = nil
-    
     typealias RealmObject = Team
     
     override static func primaryKey() -> String? {

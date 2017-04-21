@@ -98,10 +98,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuV-0J-qXk">
+                                <rect key="frame" x="0.0" y="558" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Mg-Wc-Jnj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Add team">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGroupButtonWasPressed:" destination="xy3-pC-RLQ" eventType="touchUpInside" id="IZw-Ai-8CI"/>
+                                    <action selector="addTeam:" destination="Ihx-TC-BcD" eventType="touchUpInside" id="lpD-NZ-5fR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rxS-5D-hEt" firstAttribute="leading" secondItem="88C-YZ-25l" secondAttribute="leading" id="6Ps-YP-v5c"/>
+                            <constraint firstItem="kyt-Un-TvR" firstAttribute="top" secondItem="SuV-0J-qXk" secondAttribute="bottom" constant="20" id="He3-y0-K7c"/>
+                            <constraint firstItem="SuV-0J-qXk" firstAttribute="leading" secondItem="88C-YZ-25l" secondAttribute="leading" id="Vqf-YS-3w7"/>
+                            <constraint firstAttribute="trailing" secondItem="SuV-0J-qXk" secondAttribute="trailing" id="hW7-jh-yqK"/>
                             <constraint firstAttribute="trailing" secondItem="rxS-5D-hEt" secondAttribute="trailing" id="rIH-eC-qEq"/>
                             <constraint firstItem="kyt-Un-TvR" firstAttribute="top" secondItem="rxS-5D-hEt" secondAttribute="bottom" id="uaO-kI-IMJ"/>
                             <constraint firstItem="rxS-5D-hEt" firstAttribute="top" secondItem="88C-YZ-25l" secondAttribute="top" id="xgn-Yr-2Ec"/>
@@ -109,6 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rxS-5D-hEt" id="IJY-a8-ldL"/>
+                        <segue destination="G1f-fs-4GW" kind="presentation" identifier="showAddObj" id="Etz-uh-kTY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zf-Qj-aBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -190,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVW-9N-nB6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="1661"/>
+            <point key="canvasLocation" x="2396" y="1654"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5IF-Ye-TEl">
@@ -253,4 +272,7 @@
     <resources>
         <image name="cancelXButton" width="226" height="226"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Etz-uh-kTY"/>
+    </inferredMetricsTieBreakers>
 </document>

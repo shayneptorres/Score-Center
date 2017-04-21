@@ -26,6 +26,17 @@ class GroupDetailViewController: UIViewController {
         print(group.name)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let groupsUpdated = UserDefaults.standard.value(forKey: Update.groupsUpdated.rawValue) as? Bool else {
+            return
+        }
+        if groupsUpdated {
+            tableView.reloadData()
+            UserDefaults.standard.setValue(false, forKey: Update.groupsUpdated.rawValue)
+        }
+    }
+    
     var group = Group()
     
     var headerDisplayMode : HeaderCellDisplayMode = .displaying {
@@ -34,7 +45,21 @@ class GroupDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func addTeam(_ sender: UIButton) {
+        performSegue(withIdentifier: "showAddObj", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "showAddObj":
+            guard let aovc = segue.destination as? AddObjectViewController else {return}
+            aovc.addObjectValue = .team
+            aovc.group = self.group
+            aovc.delegate = self
+        default:
+            break
+        }
+    }
 
 }
 
@@ -46,7 +71,13 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if section == 0 {
+            return 1
+        } else if section == 1 {
+            return group.teams.count
+        } else{
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,7 +99,9 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
                 return header
             }
         case 1:
-            break
+            let cell = UITableViewCell()
+            cell.textLabel?.text = group.teams[indexPath.row].name
+            return cell
         default:
             break
         }
@@ -95,5 +128,37 @@ extension GroupDetailViewController : HeaderCellDelegate {
     
     func showDisplayMode() {
         headerDisplayMode = .displaying
+    }
+}
+
+extension GroupDetailViewController : AddObjectDelegate {
+    /**
+     Retrieves all the groups in realm, assigns them to the groups data source, then reloads the tableview
+     
+     Shayne Torres
+     
+     - Parameters:
+     -
+     
+     - Return:
+     -
+     */
+    func reloadData(){
+        tableView.reloadData()
+    }
+    
+    /**
+     Unhides the tab bar in the case that it was hidden
+     
+     Shayne Torres
+     
+     - Parameters:
+     -
+     
+     - Return:
+     -
+     */
+    func showTabBar() {
+        self.tabBarController?.tabBar.isHidden = false
     }
 }
