@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gHE-qt-3hd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gHE-qt-3hd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="tableView" destination="rxS-5D-hEt" id="IJY-a8-ldL"/>
                         <segue destination="G1f-fs-4GW" kind="presentation" identifier="showAddObj" id="Etz-uh-kTY"/>
+                        <segue destination="90q-2r-AWI" kind="presentation" identifier="showScoreEditor" id="o9o-fc-jUq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zf-Qj-aBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -192,6 +193,9 @@
                                     <constraint firstAttribute="height" constant="30" id="fZK-B7-bpf"/>
                                 </constraints>
                                 <state key="normal" image="cancelXButton"/>
+                                <connections>
+                                    <action selector="cancel:" destination="G1f-fs-4GW" eventType="touchUpInside" id="LUA-Nm-nA3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -267,6 +271,113 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0j-cw-tIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="895.50224887556226"/>
+        </scene>
+        <!--Score ManagerVC-->
+        <scene sceneID="qUt-Fg-oIC">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="90q-2r-AWI" customClass="ScoreManagerVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3k5-xh-ILI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z5d-65-G4H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Djc-Nu-Fto">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-oj-KCy">
+                                <rect key="frame" x="36" y="80" width="303" height="200"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Points" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-8s-Xq0" customClass="AppTextField" customModule="Score_Center" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="263" height="45"/>
+                                        <color key="backgroundColor" red="0.69348553540000002" green="0.69348553540000002" blue="0.69348553540000002" alpha="0.30463248240000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="LaI-mb-yCH"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCW-tY-jdG">
+                                        <rect key="frame" x="20" y="148" width="121.5" height="32"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <state key="normal" title="Add points">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addPoints:" destination="90q-2r-AWI" eventType="touchUpInside" id="nNP-r9-rAb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlr-7I-JG3">
+                                        <rect key="frame" x="161.5" y="148" width="121.5" height="32"/>
+                                        <color key="backgroundColor" red="1" green="0.5062004188" blue="0.54784620039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                        <state key="normal" title="Remove points">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="removePoints:" destination="90q-2r-AWI" eventType="touchUpInside" id="R2g-9a-sxv"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Team name and current score" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiF-re-QRE" customClass="AppTextField" customModule="Score_Center" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="85" width="263" height="45"/>
+                                        <color key="backgroundColor" red="0.69348553540000002" green="0.69348553540000002" blue="0.69348553540000002" alpha="0.30463248240000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="L5S-iQ-Tfv"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Rlr-7I-JG3" firstAttribute="leading" secondItem="YCW-tY-jdG" secondAttribute="trailing" constant="20" id="01r-ZD-dmP"/>
+                                    <constraint firstItem="YCW-tY-jdG" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="9DX-wa-6iN"/>
+                                    <constraint firstAttribute="trailing" secondItem="fiF-re-QRE" secondAttribute="trailing" constant="20" id="Atk-jN-JGk"/>
+                                    <constraint firstAttribute="bottom" secondItem="YCW-tY-jdG" secondAttribute="bottom" constant="20" id="KCZ-hK-dW6"/>
+                                    <constraint firstAttribute="trailing" secondItem="MkZ-8s-Xq0" secondAttribute="trailing" constant="20" id="M3O-pm-NrM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rlr-7I-JG3" secondAttribute="bottom" constant="20" id="Wk0-lc-yjG"/>
+                                    <constraint firstItem="fiF-re-QRE" firstAttribute="top" secondItem="MkZ-8s-Xq0" secondAttribute="bottom" constant="20" id="aZY-3A-wMz"/>
+                                    <constraint firstItem="MkZ-8s-Xq0" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="kyD-hU-k3G"/>
+                                    <constraint firstItem="YCW-tY-jdG" firstAttribute="width" secondItem="Rlr-7I-JG3" secondAttribute="width" id="lLM-qf-NHz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rlr-7I-JG3" secondAttribute="trailing" constant="20" id="oAR-Fd-y9G"/>
+                                    <constraint firstItem="MkZ-8s-Xq0" firstAttribute="top" secondItem="3vH-oj-KCy" secondAttribute="top" constant="20" id="odB-hJ-2RF"/>
+                                    <constraint firstItem="fiF-re-QRE" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="pjb-j7-lXg"/>
+                                    <constraint firstAttribute="height" constant="200" id="zhT-x7-Yv6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ2-Hl-6UJ">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1MD-lY-Zbn"/>
+                                    <constraint firstAttribute="width" constant="30" id="dSU-Wt-Mtg"/>
+                                </constraints>
+                                <state key="normal" image="cancelXButton"/>
+                                <connections>
+                                    <action selector="cancel:" destination="90q-2r-AWI" eventType="touchUpInside" id="aZS-fH-trB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="3vH-oj-KCy" secondAttribute="trailing" constant="20" id="CEX-76-76B"/>
+                            <constraint firstItem="3vH-oj-KCy" firstAttribute="leading" secondItem="Djc-Nu-Fto" secondAttribute="leadingMargin" constant="20" id="hjy-P6-wPM"/>
+                            <constraint firstItem="EJ2-Hl-6UJ" firstAttribute="top" secondItem="Djc-Nu-Fto" secondAttribute="top" constant="20" id="kT5-Bt-VPN"/>
+                            <constraint firstItem="3vH-oj-KCy" firstAttribute="top" secondItem="3k5-xh-ILI" secondAttribute="bottom" constant="60" id="rtP-Jp-vCm"/>
+                            <constraint firstItem="EJ2-Hl-6UJ" firstAttribute="leading" secondItem="Djc-Nu-Fto" secondAttribute="leading" constant="20" id="uLk-wp-Cc3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addPointButton" destination="YCW-tY-jdG" id="iro-Hx-G1R"/>
+                        <outlet property="pointsTextField" destination="MkZ-8s-Xq0" id="EfC-X7-Goc"/>
+                        <outlet property="removePointsButton" destination="Rlr-7I-JG3" id="g1P-AD-Vmq"/>
+                        <outlet property="teamTextField" destination="fiF-re-QRE" id="mST-6l-b4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oqu-jB-UFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608.8000000000002" y="895.50224887556226"/>
         </scene>
     </scenes>
     <resources>

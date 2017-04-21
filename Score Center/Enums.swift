@@ -12,6 +12,7 @@ enum CellIdentifier : String {
     case groupCell = "groupCell"
     case groupHeaderCell = "GROUP_HEADER_CELL"
     case editHeaderCell = "EDIT_HEADER_CELL"
+    case teamCell = "TEAM_CELL"
 }
 
 enum Update : String {

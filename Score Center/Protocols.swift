@@ -7,8 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HeaderCellDelegate {
     func showEditMode()
     func showDisplayMode()
+}
+
+protocol ScoreManagerDelegate {
+    func reloadData()
 }

@@ -14,16 +14,19 @@ class GroupDetailViewController: UIViewController {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
+            tableView.backgroundColor = UIColor(netHex: 0xeeeeee)
             var headerNib = UINib(nibName: "GroupHeaderCell", bundle: nil)
             tableView.register(headerNib, forCellReuseIdentifier: CellIdentifier.groupHeaderCell.rawValue)
             headerNib = UINib(nibName: "EditHeaderCell", bundle: nil)
             tableView.register(headerNib, forCellReuseIdentifier: CellIdentifier.editHeaderCell.rawValue)
+            headerNib = UINib(nibName: "TeamCell", bundle: nil)
+            tableView.register(headerNib, forCellReuseIdentifier: CellIdentifier.teamCell.rawValue)
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(group.name)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,13 +34,15 @@ class GroupDetailViewController: UIViewController {
         guard let groupsUpdated = UserDefaults.standard.value(forKey: Update.groupsUpdated.rawValue) as? Bool else {
             return
         }
+        
         if groupsUpdated {
-            tableView.reloadData()
+            reloadData()
             UserDefaults.standard.setValue(false, forKey: Update.groupsUpdated.rawValue)
         }
     }
     
     var group = Group()
+    var selectedTeam : Team?
     
     var headerDisplayMode : HeaderCellDisplayMode = .displaying {
         didSet {
@@ -53,9 +58,15 @@ class GroupDetailViewController: UIViewController {
         switch segue.identifier! {
         case "showAddObj":
             guard let aovc = segue.destination as? AddObjectViewController else {return}
+            self.tabBarController?.tabBar.isHidden = true
             aovc.addObjectValue = .team
             aovc.group = self.group
             aovc.delegate = self
+        case "showScoreEditor":
+            guard let smvc = segue.destination as? ScoreManagerVC, let selectedTeam = selectedTeam else {return}
+            self.tabBarController?.tabBar.isHidden = true
+            smvc.team = selectedTeam
+            smvc.delegate = self
         default:
             break
         }
@@ -99,14 +110,38 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
                 return header
             }
         case 1:
-            let cell = UITableViewCell()
-            cell.textLabel?.text = group.teams[indexPath.row].name
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.teamCell.rawValue) as? TeamCell else {return UITableViewCell()}
+            cell.team = group.teams[indexPath.row]
             return cell
         default:
             break
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 1 {
+            let v = UIView()
+            v.backgroundColor = UIColor(netHex: 0xeeeeee)
+            return v
+        }
+        return UIView()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            break
+        case 1:
+            selectedTeam = group.teams[indexPath.row]
+            performSegue(withIdentifier: "showScoreEditor", sender: self)
+        default: break
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -117,6 +152,14 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
             return 50
         default:
             return 50
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            group.teams[indexPath.row].delete()
+            UserDefaults.standard.setValue(true, forKey: Update.groupsUpdated.rawValue)
+            reloadData()
         }
     }
 }
@@ -131,7 +174,7 @@ extension GroupDetailViewController : HeaderCellDelegate {
     }
 }
 
-extension GroupDetailViewController : AddObjectDelegate {
+extension GroupDetailViewController : AddObjectDelegate, ScoreManagerDelegate {
     /**
      Retrieves all the groups in realm, assigns them to the groups data source, then reloads the tableview
      

@@ -62,6 +62,9 @@ class AddObjectViewController: UIViewController {
         })
     }
     
+    @IBAction func cancel(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: {self.delegate?.showTabBar()})
+    }
     
 
 }
