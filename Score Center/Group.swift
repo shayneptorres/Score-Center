@@ -19,6 +19,10 @@ class Group : Object, RealmManagable {
     var isActive = Bool()
     typealias RealmObject = Group
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     func add(team: Team){
         let realm = try! Realm()
         try! realm.write {

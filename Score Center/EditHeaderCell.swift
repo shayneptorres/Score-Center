@@ -33,8 +33,12 @@ class EditHeaderCell: UITableViewCell {
     
     @IBAction func save(_ sender: UIButton) {
         guard let delegate = delegate, var group = group else { return }
-        group.desc = descriptionTextArea.text
-        group.save()
+        group.update() {
+            group.name = groupNameTextField.text!
+            group.desc = descriptionTextArea.text
+        }
+        let def = UserDefaults.standard
+        def.setValue(true, forKey: Update.groupsUpdated.rawValue)
         delegate.showDisplayMode()
     }
     

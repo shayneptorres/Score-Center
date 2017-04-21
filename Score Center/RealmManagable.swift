@@ -18,9 +18,6 @@ protocol RealmManagable {
 
 extension RealmManagable where Self : Object {
     
-    static func primaryKey() -> String? {
-        return "id"
-    }
 
     mutating func autoincrementID(){
         let realm = try! Realm()
@@ -37,9 +34,10 @@ extension RealmManagable where Self : Object {
         }
     }
     
-    mutating func update(){
+    mutating func update(completion: () -> ()){
         let realm = try! Realm()
         try! realm.write {
+            completion()
             self.updatedAt = Date.timeStamp()
             realm.add(self, update: true)
         }

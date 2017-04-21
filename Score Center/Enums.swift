@@ -14,6 +14,10 @@ enum CellIdentifier : String {
     case editHeaderCell = "EDIT_HEADER_CELL"
 }
 
+enum Update : String {
+    case groupsUpdated = "groupsUpdated"
+}
+
 /// Determines what type of header cell will be dispplayed on the groups detail VC
 ///
 /// - editing: used when editing the group
