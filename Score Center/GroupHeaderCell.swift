@@ -13,6 +13,7 @@ class GroupHeaderCell: UITableViewCell {
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var totalPointsLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    var delegate : HeaderCellDelegate?
     
     class var cellHeight : CGFloat { get { return 145 } }
     
@@ -30,5 +31,11 @@ class GroupHeaderCell: UITableViewCell {
         var totalPoints : Double = 0
         group?.teams.forEach({ totalPoints += $0.score })
     }
+    
+    @IBAction func edit(_ sender: UIButton) {
+        guard let delegate = delegate else {return}
+        delegate.showEditMode()
+    }
+    
     
 }

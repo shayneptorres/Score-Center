@@ -13,7 +13,7 @@ protocol AddGroupDelegate {
     func showTabBar()
 }
 
-class AddGroupViewController: UIViewController, GroupService {
+class AddGroupViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var groupNameLabel: AppTextField!
@@ -29,9 +29,9 @@ class AddGroupViewController: UIViewController, GroupService {
         if groupNameLabel.text == "" {
         
         } else {
-            let newGroup = Group()
+            var newGroup = Group()
             newGroup.name = groupNameLabel.text!
-            saveGroup(group: newGroup)
+            newGroup.save()
             delegate?.reloadGroups()
             delegate?.showTabBar()
             self.dismiss(animated: true, completion: nil)

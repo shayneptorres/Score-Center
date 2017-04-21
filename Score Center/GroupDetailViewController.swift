@@ -9,15 +9,15 @@
 import UIKit
 
 class GroupDetailViewController: UIViewController {
-    
-    let GROUP_HEADER_CELL = "GROUP_HEADER_CELL"
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            let headerNib = UINib(nibName: "GroupHeaderCell", bundle: nil)
-            tableView.register(headerNib, forCellReuseIdentifier: GROUP_HEADER_CELL)
+            var headerNib = UINib(nibName: "GroupHeaderCell", bundle: nil)
+            tableView.register(headerNib, forCellReuseIdentifier: CellIdentifier.groupHeaderCell.rawValue)
+            headerNib = UINib(nibName: "EditHeaderCell", bundle: nil)
+            tableView.register(headerNib, forCellReuseIdentifier: CellIdentifier.editHeaderCell.rawValue)
         }
     }
     
@@ -27,6 +27,12 @@ class GroupDetailViewController: UIViewController {
     }
     
     var group = Group()
+    
+    var headerDisplayMode : HeaderCellDisplayMode = .displaying {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     
 
@@ -46,11 +52,21 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            guard let header = tableView.dequeueReusableCell(withIdentifier: GROUP_HEADER_CELL) as? GroupHeaderCell else {
-                return UITableViewCell()
+            if headerDisplayMode == .displaying {
+                guard let header = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.groupHeaderCell.rawValue) as? GroupHeaderCell else {
+                    return UITableViewCell()
+                }
+                header.group = self.group
+                header.delegate = self
+                return header
+            } else {
+                guard let header = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.editHeaderCell.rawValue) as? EditHeaderCell else {
+                    return UITableViewCell()
+                }
+                header.group = self.group
+                header.delegate = self
+                return header
             }
-            header.group = self.group
-            return header
         case 1:
             break
         default:
@@ -69,5 +85,15 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
         default:
             return 50
         }
+    }
+}
+
+extension GroupDetailViewController : HeaderCellDelegate {
+    func showEditMode() {
+        headerDisplayMode = .editing
+    }
+    
+    func showDisplayMode() {
+        headerDisplayMode = .displaying
     }
 }

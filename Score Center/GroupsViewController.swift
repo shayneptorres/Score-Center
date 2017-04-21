@@ -8,19 +8,24 @@
 
 import UIKit
 
-class GroupsViewController: UIViewController, GroupService {
+class GroupsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!{
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
             let nib = UINib(nibName: "GroupTableViewCell", bundle: nil)
-            tableView.register(nib, forCellReuseIdentifier: "groupCell")
+            tableView.register(nib, forCellReuseIdentifier: CellIdentifier.groupCell.rawValue)
         }
     }
     @IBOutlet weak var bottomButton: UIButton!
     
-    var groups = [Group]()
+    var groups = [Group]() {
+        didSet {
+            groups.sort { $0.updatedAt > $1.updatedAt}
+            tableView.reloadData()
+        }
+    }
     var selectedGroup = Group()
 
     override func viewDidLoad() {
@@ -70,7 +75,7 @@ extension GroupsViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell") as? GroupTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.groupCell.rawValue) as? GroupTableViewCell
         cell?.group = groups[indexPath.row]
         return cell!
     }
@@ -81,7 +86,7 @@ extension GroupsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            deleteGroup(groupToDelete: groups[indexPath.row])
+            groups[indexPath.row].delete()
             reloadData()
         }
     }
@@ -107,9 +112,8 @@ extension GroupsViewController : AddObjectDelegate {
      -
      */
     func reloadData(){
-        groups = getAllGroups()
-        groups.sort { $0.updatedAt > $1.updatedAt}
-        tableView.reloadData()
+        guard let fetchedGroups = Group.getAll() as? [Group] else { return }
+        groups = fetchedGroups
     }
     
     /**

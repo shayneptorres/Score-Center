@@ -54,8 +54,10 @@ class AddObjectViewController: UIViewController {
             group?.add(team: newTeam)
             break
         }
-        delegate?.reloadData()
-        delegate?.showTabBar()
+        self.dismiss(animated: true, completion: {
+            self.delegate?.reloadData()
+            self.delegate?.showTabBar()
+        })
     }
     
     

@@ -13,27 +13,7 @@ protocol GroupService {
 }
 
 extension GroupService {
-    
-    /**
-     Saves a new group to the Realm DB
-     
-     Shayne Torres
-     
-     - Parameters:
-     -
-     
-     - Return:
-     -
-     */
-    func saveGroup(group: Group){
-        let realm = try! Realm()
-        try! realm.write {
-            group.autoincrementID()
-            group.createdAt = Date.timeStamp()
-            group.updatedAt = Date.timeStamp()
-            realm.add(group)
-        }
-    }
+
     
     /**
      Updates a group to the realm database

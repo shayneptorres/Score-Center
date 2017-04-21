@@ -39,9 +39,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-w8-kWl">
+                                <rect key="frame" x="270" y="5" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bmX-Xr-dk4"/>
+                                    <constraint firstAttribute="width" constant="30" id="ofx-Cf-yuH"/>
+                                </constraints>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="edit:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fPq-6Y-MwM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lRc-w8-kWl" secondAttribute="trailing" constant="20" id="4cX-bN-h5R"/>
+                            <constraint firstItem="lRc-w8-kWl" firstAttribute="top" secondItem="g3n-sB-Ctm" secondAttribute="top" constant="5" id="5TY-2Q-2rx"/>
                             <constraint firstItem="LJ6-pb-Hvq" firstAttribute="top" secondItem="afY-Um-sKJ" secondAttribute="bottom" constant="8" id="5rg-Xh-8lb"/>
                             <constraint firstItem="afY-Um-sKJ" firstAttribute="top" secondItem="TED-YB-E7t" secondAttribute="bottom" constant="8" id="61j-6a-X8v"/>
                             <constraint firstAttribute="trailing" secondItem="LJ6-pb-Hvq" secondAttribute="trailing" constant="20" id="6hg-9C-JE1"/>

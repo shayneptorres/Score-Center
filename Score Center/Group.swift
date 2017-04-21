@@ -17,15 +17,7 @@ class Group : Object, RealmManagable {
     dynamic var updatedAt = Date()
     var teams = List<Team>()
     var isActive = Bool()
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
-    
-    func autoincrementID(){
-        let realm = try! Realm()
-        self.id = (realm.objects(Group.self).max(ofProperty: "id") as Int? ?? 0) + 1
-    }
+    typealias RealmObject = Group
     
     func add(team: Team){
         let realm = try! Realm()
@@ -33,24 +25,5 @@ class Group : Object, RealmManagable {
             self.teams.append(team)
             self.updatedAt = Date.timeStamp()
         }
-    }
-    
-    func delete(){
-        let realm = try! Realm()
-        
-        try! realm.write {
-            realm.delete(self)
-        }
-    }
-    
-    static func getAll() -> [Group] {
-        let realm = try! Realm()
-        return realm.objects(Group.self).map({ $0 })
-    }
-    
-    static func getOne(withId id: Int) -> Group {
-        let realm = try! Realm()
-        
-        return realm.objects(Group.self).filter("id == \(id)").first!
     }
 }

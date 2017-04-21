@@ -13,6 +13,8 @@
 		B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831C3BA1E6E58FC0097A76B /* ShadowService.swift */; };
 		B831C3BD1E6E59340097A76B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831C3BC1E6E59340097A76B /* UIView.swift */; };
 		B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831C3BE1E6E59F20097A76B /* UIColor.swift */; };
+		B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */; };
+		B84BAFD11EA4930F00228B56 /* EditHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */; };
 		B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */; };
 		B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */; };
 		B888F9A01E6C67F90036A188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F99F1E6C67F90036A188 /* AppDelegate.swift */; };
@@ -28,6 +30,8 @@
 		B888F9DD1E6E48060036A188 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9DC1E6E48060036A188 /* GroupsViewController.swift */; };
 		B888F9E01E6E497B0036A188 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9DE1E6E497B0036A188 /* GroupTableViewCell.swift */; };
 		B888F9E11E6E497B0036A188 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B888F9DF1E6E497B0036A188 /* GroupTableViewCell.xib */; };
+		B8F216801EA9DA5100666917 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2167F1EA9DA5100666917 /* Enums.swift */; };
+		B8F216821EA9DBE900666917 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216811EA9DBE900666917 /* Protocols.swift */; };
 		B8FC53FF1E6FB3CF0078E1D5 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */; };
 		B8FC54021E7139C00078E1D5 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC54011E7139C00078E1D5 /* AppTextField.swift */; };
 		B8FC54041E7245B00078E1D5 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */; };
@@ -63,6 +67,8 @@
 		B831C3BA1E6E58FC0097A76B /* ShadowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowService.swift; sourceTree = "<group>"; };
 		B831C3BC1E6E59340097A76B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B831C3BE1E6E59F20097A76B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHeaderCell.swift; sourceTree = "<group>"; };
+		B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditHeaderCell.xib; sourceTree = "<group>"; };
 		B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupHeaderCell.swift; sourceTree = "<group>"; };
 		B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeaderCell.xib; sourceTree = "<group>"; };
 		B888F99C1E6C67F90036A188 /* Score Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,8 @@
 		B888F9DC1E6E48060036A188 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		B888F9DE1E6E497B0036A188 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		B888F9DF1E6E497B0036A188 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		B8F2167F1EA9DA5100666917 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		B8F216811EA9DBE900666917 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
 		B8FC54011E7139C00078E1D5 /* AppTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +169,7 @@
 				B888F9D11E6D4BCB0036A188 /* Services */,
 				B888F9D71E6E45BD0036A188 /* Extensions */,
 				B888F9CF1E6D4BC20036A188 /* Views */,
+				B8F2167E1EA9DA3F00666917 /* Tools */,
 				B888F9CD1E6C68000036A188 /* Supporting Files */,
 			);
 			path = "Score Center";
@@ -250,8 +259,19 @@
 				B888F9DF1E6E497B0036A188 /* GroupTableViewCell.xib */,
 				B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */,
 				B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */,
+				B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */,
+				B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */,
 			);
 			name = nibs;
+			sourceTree = "<group>";
+		};
+		B8F2167E1EA9DA3F00666917 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B8F2167F1EA9DA5100666917 /* Enums.swift */,
+				B8F216811EA9DBE900666917 /* Protocols.swift */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		B8FC54001E71399D0078E1D5 /* Suclasses */ = {
@@ -404,6 +424,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84BAFD11EA4930F00228B56 /* EditHeaderCell.xib in Resources */,
 				B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */,
 				B888F9AA1E6C67F90036A188 /* LaunchScreen.storyboard in Resources */,
 				B888F9A71E6C67F90036A188 /* Assets.xcassets in Resources */,
@@ -580,12 +601,15 @@
 				B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */,
 				B8FC54041E7245B00078E1D5 /* GroupDetailViewController.swift in Sources */,
 				B888F9DD1E6E48060036A188 /* GroupsViewController.swift in Sources */,
+				B8F216821EA9DBE900666917 /* Protocols.swift in Sources */,
 				B888F9D31E6E44290036A188 /* Group.swift in Sources */,
 				B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */,
 				B888F9DB1E6E46B30036A188 /* Team.swift in Sources */,
+				B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */,
 				B831C3BD1E6E59340097A76B /* UIView.swift in Sources */,
 				B888F9D91E6E45CC0036A188 /* Date.swift in Sources */,
 				B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */,
+				B8F216801EA9DA5100666917 /* Enums.swift in Sources */,
 				B8FC54021E7139C00078E1D5 /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

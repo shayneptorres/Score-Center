@@ -9,21 +9,18 @@
 import Foundation
 import RealmSwift
 
-class Team: Object {
+class Team: Object, RealmManagable {
     dynamic var id = Int()
     dynamic var name = String()
-    dynamic var creatdAt = Date()
+    dynamic var createdAt = Date()
     dynamic var updatedAt = Date()
     dynamic var score = Double()
     dynamic var ranking = Int()
     dynamic var parentGroup : Group? = nil
     
+    typealias RealmObject = Team
+    
     override static func primaryKey() -> String? {
         return "id"
-    }
-    
-    func autoincrementID(){
-        let realm = try! Realm()
-        self.id = (realm.objects(Team.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
 }

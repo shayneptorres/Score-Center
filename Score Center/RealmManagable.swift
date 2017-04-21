@@ -10,14 +10,22 @@ import Foundation
 import RealmSwift
 
 protocol RealmManagable {
+    var id : Int { get set }
     var createdAt : Date { get set }
     var updatedAt : Date { get set }
-    
-    func autoincrementID()
-    
+    associatedtype RealmObject
 }
 
 extension RealmManagable where Self : Object {
+    
+    static func primaryKey() -> String? {
+        return "id"
+    }
+
+    mutating func autoincrementID(){
+        let realm = try! Realm()
+        self.id = (realm.objects(RealmObject.self as! Object.Type).max(ofProperty: "id") as Int? ?? 0) + 1
+    }
     
     mutating func save(){
         let realm = try! Realm()
@@ -42,6 +50,17 @@ extension RealmManagable where Self : Object {
         try! realm.write {
             realm.delete(self)
         }
+    }
+    
+    static func getAll() -> [Object] {
+        let realm = try! Realm()
+        return realm.objects(RealmObject.self as! Object.Type).map({ obj in obj })
+    }
+    
+    static func getOne(withId id: Int) -> Object {
+        let realm = try! Realm()
+        
+        return realm.objects(RealmObject.self as! Object.Type).filter("id == \(id)").first!
     }
 
 }
