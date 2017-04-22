@@ -33,7 +33,7 @@ class GroupTableViewCell: UITableViewCell {
      */
     func updateUI(){
         groupNameLabel.text = group.name
-        countLabel.text = "\(group.teams.count)"
+        countLabel.text = "\(group.teams.count) teams"
     }
     
     func addShadow(){

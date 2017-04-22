@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Active GroupVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ActiveGroupVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,9 +21,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f1B-r4-mCw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f1B-r4-mCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FDs-oI-dCx"/>
+                            <constraint firstAttribute="trailing" secondItem="f1B-r4-mCw" secondAttribute="trailing" id="aV2-B9-uXQ"/>
+                            <constraint firstItem="f1B-r4-mCw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gZi-Z3-Yya"/>
+                            <constraint firstItem="f1B-r4-mCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lAl-y4-bZr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5K2-MI-eas"/>
+                    <connections>
+                        <outlet property="tableView" destination="f1B-r4-mCw" id="Odm-gr-zrN"/>
+                        <segue destination="90q-2r-AWI" kind="presentation" identifier="showScoreEditor" id="uhn-Oq-O8r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,11 +250,11 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
-        <!--Item-->
+        <!--Active Group-->
         <scene sceneID="ujD-2e-Stg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qS0-ZO-3f5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="EF0-Id-kyC"/>
+                    <tabBarItem key="tabBarItem" title="Active Group" id="EF0-Id-kyC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x1-n0-gri">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -253,11 +269,11 @@
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
-        <!--Item-->
+        <!--Groups-->
         <scene sceneID="eLb-ZG-ZfM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Sr-sH-SWf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Bmf-0H-xmU"/>
+                    <tabBarItem key="tabBarItem" title="Groups" id="Bmf-0H-xmU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6YX-ti-3f3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -377,13 +393,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqu-jB-UFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.8000000000002" y="895.50224887556226"/>
+            <point key="canvasLocation" x="3174" y="137"/>
         </scene>
     </scenes>
     <resources>
         <image name="cancelXButton" width="226" height="226"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="uhn-Oq-O8r"/>
         <segue reference="Etz-uh-kTY"/>
     </inferredMetricsTieBreakers>
 </document>

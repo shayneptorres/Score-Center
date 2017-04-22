@@ -15,6 +15,10 @@ enum CellIdentifier : String {
     case teamCell = "TEAM_CELL"
 }
 
+enum UserDefaultsKey : String {
+    case activeGroup = "activeGroupID"
+}
+
 enum Update : String {
     case groupsUpdated = "groupsUpdated"
 }

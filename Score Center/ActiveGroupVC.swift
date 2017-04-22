@@ -1,20 +1,28 @@
 //
-//  GroupDetailViewController.swift
+//  ActiveGroupVC.swift
 //  Score Center
 //
-//  Created by Shayne Torres on 3/9/17.
+//  Created by Shayne Torres on 4/21/17.
 //  Copyright © 2017 sptorres. All rights reserved.
 //
 
 import UIKit
 
-class GroupDetailViewController: UIViewController {
-
+class ActiveGroupVC: UIViewController {
+    
+    var group : Group? {
+        didSet {
+            tableView.reloadData()
+            tableView.isHidden = false
+        }
+    }
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
             tableView.backgroundColor = UIColor(netHex: 0xeeeeee)
+            tableView.separatorStyle = .none
             var headerNib = UINib(nibName: "GroupHeaderCell", bundle: nil)
             tableView.register(headerNib, forCellReuseIdentifier: CellIdentifier.groupHeaderCell.rawValue)
             headerNib = UINib(nibName: "EditHeaderCell", bundle: nil)
@@ -24,30 +32,6 @@ class GroupDetailViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
-        self.tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        guard let groupsUpdated = UserDefaults.standard.value(forKey: Update.groupsUpdated.rawValue) as? Bool else {
-            return
-        }
-        
-        if groupsUpdated {
-            reloadData()
-            UserDefaults.standard.setValue(false, forKey: Update.groupsUpdated.rawValue)
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    var group = Group()
     var selectedTeam : Team?
     
     var headerDisplayMode : HeaderCellDisplayMode = .displaying {
@@ -55,9 +39,24 @@ class GroupDetailViewController: UIViewController {
             tableView.reloadData()
         }
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.isHidden = true
+//        guard let id = UserDefaults.standard.value(forKey: UserDefaultsKey.activeGroup.rawValue) as? Int,
+//            let group = Group.getOne(withId: id) as? Group else {
+//            return
+//        }
+//        self.group = group
+    }
     
-    @IBAction func addTeam(_ sender: UIButton) {
-        performSegue(withIdentifier: "showAddObj", sender: self)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let id = UserDefaults.standard.value(forKey: UserDefaultsKey.activeGroup.rawValue) as? Int,
+            let group = Group.getOne(withId: id) as? Group else {
+                return
+        }
+        self.group = group
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -75,17 +74,17 @@ class GroupDetailViewController: UIViewController {
             break
         }
     }
-
 }
 
 // MARK: - TableView Methods
-extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource {
+extension ActiveGroupVC : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let group = group else {return 0}
         if section == 0 {
             return 1
         } else if section == 1 {
@@ -114,7 +113,8 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
                 return header
             }
         case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.teamCell.rawValue) as? TeamCell else {return UITableViewCell()}
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.teamCell.rawValue) as? TeamCell,
+            let group = group else {return UITableViewCell()}
             cell.team = group.teams[indexPath.row]
             return cell
         default:
@@ -138,6 +138,7 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let group = group else {return}
         switch indexPath.section {
         case 0:
             break
@@ -160,15 +161,16 @@ extension GroupDetailViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        guard let group = group else {return}
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             group.teams[indexPath.row].delete()
             UserDefaults.standard.setValue(true, forKey: Update.groupsUpdated.rawValue)
-            reloadData()
+            tableView.reloadData()
         }
     }
 }
 
-extension GroupDetailViewController : HeaderCellDelegate {
+extension ActiveGroupVC : HeaderCellDelegate {
     func showEditMode() {
         headerDisplayMode = .editing
     }
@@ -178,7 +180,7 @@ extension GroupDetailViewController : HeaderCellDelegate {
     }
 }
 
-extension GroupDetailViewController : AddObjectDelegate, ScoreManagerDelegate {
+extension ActiveGroupVC : AddObjectDelegate, ScoreManagerDelegate {
     /**
      Retrieves all the groups in realm, assigns them to the groups data source, then reloads the tableview
      

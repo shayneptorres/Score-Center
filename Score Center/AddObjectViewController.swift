@@ -29,14 +29,15 @@ class AddObjectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
     func updateUI(){
         switch addObjectValue {
         case .group:
-            break
+            objectNameTextField.placeholder = "Group name"
         case .team:
-            break
+            objectNameTextField.placeholder = "Team name"
         }
     }
     
@@ -63,6 +64,7 @@ class AddObjectViewController: UIViewController {
     }
     
     @IBAction func cancel(_ sender: UIButton) {
+        
         self.dismiss(animated: true, completion: {self.delegate?.showTabBar()})
     }
     

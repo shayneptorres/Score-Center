@@ -16,6 +16,7 @@
 		B844255F1EAAB1CF007CA321 /* ScoreManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844255E1EAAB1CF007CA321 /* ScoreManagerVC.swift */; };
 		B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */; };
 		B84BAFD11EA4930F00228B56 /* EditHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */; };
+		B85470BC1EAACE4B0016B714 /* ActiveGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */; };
 		B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */; };
 		B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */; };
 		B888F9A01E6C67F90036A188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F99F1E6C67F90036A188 /* AppDelegate.swift */; };
@@ -73,6 +74,7 @@
 		B844255E1EAAB1CF007CA321 /* ScoreManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManagerVC.swift; sourceTree = "<group>"; };
 		B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHeaderCell.swift; sourceTree = "<group>"; };
 		B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditHeaderCell.xib; sourceTree = "<group>"; };
+		B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupVC.swift; sourceTree = "<group>"; };
 		B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupHeaderCell.swift; sourceTree = "<group>"; };
 		B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeaderCell.xib; sourceTree = "<group>"; };
 		B888F99C1E6C67F90036A188 /* Score Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 				B857DDE31EA266A8003A00BF /* Groups */,
 				B8FC54051E7260460078E1D5 /* AddObjectViewController.swift */,
 				B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */,
+				B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				B888F9D91E6E45CC0036A188 /* Date.swift in Sources */,
 				B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */,
 				B8F216801EA9DA5100666917 /* Enums.swift in Sources */,
+				B85470BC1EAACE4B0016B714 /* ActiveGroupVC.swift in Sources */,
 				B8FC54021E7139C00078E1D5 /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

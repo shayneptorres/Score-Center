@@ -30,6 +30,7 @@ class GroupHeaderCell: UITableViewCell {
         descriptionLabel.text = group?.desc
         var totalPoints : Double = 0
         group?.teams.forEach({ totalPoints += $0.score })
+        totalPointsLabel.text = "Total points: \(totalPoints)"
     }
     
     @IBAction func edit(_ sender: UIButton) {
