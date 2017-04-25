@@ -108,8 +108,6 @@ class GroupTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSour
         case 0:
             break
         case 1:
-            print(group?.teams)
-            print(group?.teams[indexPath.row].name)
             selectedTeam = group?.teams.sorted(by: {$0.score > $1.score})[indexPath.row]
             
             viewController?.performSegue(withIdentifier: "showScoreEditor", sender: self)
