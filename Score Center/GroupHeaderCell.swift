@@ -10,6 +10,7 @@ import UIKit
 
 class GroupHeaderCell: UITableViewCell {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var totalPointsLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -30,7 +31,7 @@ class GroupHeaderCell: UITableViewCell {
         descriptionLabel.text = group?.desc
         var totalPoints : Double = 0
         group?.teams.forEach({ totalPoints += $0.score })
-        totalPointsLabel.text = "Total points: \(totalPoints)"
+        totalPointsLabel.text = "Total points: \(totalPoints.toDecimalFormat())pts"
     }
     
     @IBAction func edit(_ sender: UIButton) {

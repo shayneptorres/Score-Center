@@ -12,7 +12,8 @@ class GroupTableViewCell: UITableViewCell {
     
     @IBOutlet weak var groupNameLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var bodyView: UIView!
+    @IBOutlet weak var containerView: UIView!
+    
     
     var group = Group() {
         didSet{
@@ -34,10 +35,11 @@ class GroupTableViewCell: UITableViewCell {
     func updateUI(){
         groupNameLabel.text = group.name
         countLabel.text = "\(group.teams.count) teams"
+        addShadow()
     }
     
     func addShadow(){
-        bodyView.applyShadow()
+        containerView.applyShadow()
     }
     
 }

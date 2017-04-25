@@ -55,10 +55,10 @@ extension RealmManagable where Self : Object {
         return realm.objects(RealmObject.self as! Object.Type).map({ obj in obj })
     }
     
-    static func getOne(withId id: Int) -> Object {
+    static func getOne(withId id: Int) -> Object? {
         let realm = try! Realm()
         
-        return realm.objects(RealmObject.self as! Object.Type).filter("id == \(id)").first!
+        return realm.objects(RealmObject.self as! Object.Type).filter("id == \(id)").first
     }
 
 }

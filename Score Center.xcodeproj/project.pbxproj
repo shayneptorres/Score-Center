@@ -36,6 +36,8 @@
 		B8F216821EA9DBE900666917 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216811EA9DBE900666917 /* Protocols.swift */; };
 		B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216861EA9ED0900666917 /* TeamCell.swift */; };
 		B8F216891EA9ED0900666917 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F216871EA9ED0900666917 /* TeamCell.xib */; };
+		B8FC0E671EAB40480092D46F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC0E661EAB40480092D46F /* Extensions.swift */; };
+		B8FC0E691EAB42D80092D46F /* GroupDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC0E681EAB42D80092D46F /* GroupDetailTableView.swift */; };
 		B8FC53FF1E6FB3CF0078E1D5 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */; };
 		B8FC54021E7139C00078E1D5 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC54011E7139C00078E1D5 /* AppTextField.swift */; };
 		B8FC54041E7245B00078E1D5 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */; };
@@ -100,6 +102,8 @@
 		B8F216811EA9DBE900666917 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B8F216861EA9ED0900666917 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		B8F216871EA9ED0900666917 /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		B8FC0E661EAB40480092D46F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B8FC0E681EAB42D80092D46F /* GroupDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTableView.swift; sourceTree = "<group>"; };
 		B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
 		B8FC54011E7139C00078E1D5 /* AppTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 			children = (
 				B8F2167F1EA9DA5100666917 /* Enums.swift */,
 				B8F216811EA9DBE900666917 /* Protocols.swift */,
+				B8FC0E661EAB40480092D46F /* Extensions.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				B8FC54011E7139C00078E1D5 /* AppTextField.swift */,
+				B8FC0E681EAB42D80092D46F /* GroupDetailTableView.swift */,
 			);
 			name = Suclasses;
 			sourceTree = "<group>";
@@ -613,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8FC0E671EAB40480092D46F /* Extensions.swift in Sources */,
 				B80DA39B1EA0612F00770317 /* RealmManagable.swift in Sources */,
 				B8FC53FF1E6FB3CF0078E1D5 /* AddGroupViewController.swift in Sources */,
 				B8FC54061E7260460078E1D5 /* AddObjectViewController.swift in Sources */,
@@ -628,6 +635,7 @@
 				B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */,
 				B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */,
 				B888F9DB1E6E46B30036A188 /* Team.swift in Sources */,
+				B8FC0E691EAB42D80092D46F /* GroupDetailTableView.swift in Sources */,
 				B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */,
 				B831C3BD1E6E59340097A76B /* UIView.swift in Sources */,
 				B888F9D91E6E45CC0036A188 /* Date.swift in Sources */,

@@ -13,6 +13,7 @@ class TeamCell: UITableViewCell {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     
     
     var team : Team? {
@@ -21,11 +22,13 @@ class TeamCell: UITableViewCell {
         }
     }
     
+    var rank = Int()
+    
     func updateUI(){
         guard let team = team else {return}
-        rankLabel.text = String(team.ranking)
+        rankLabel.text = rank.ordinalString()
         teamNameLabel.text = team.name
-        pointsLabel.text = String(team.score)
+        pointsLabel.text = "\(team.score.toDecimalFormat())pts"
     }
     
 }

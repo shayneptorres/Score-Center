@@ -75,6 +75,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="containerView" destination="Va6-lI-SdV" id="5Xw-Cu-M19"/>
                 <outlet property="descriptionTextArea" destination="fIR-ph-GAj" id="a7W-yj-EXN"/>
                 <outlet property="groupNameTextField" destination="hWE-0e-EK4" id="WSQ-U5-LFd"/>
                 <outlet property="makeActiveButton" destination="4hF-fT-c2M" id="HdX-tv-fMW"/>

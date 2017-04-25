@@ -8,9 +8,13 @@
 
 import UIKit
 
-class EditHeaderCell: UITableViewCell, UITextViewDelegate {
+class EditHeaderCell: UITableViewCell, UITextViewDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var groupNameTextField: UITextField!
+    @IBOutlet weak var groupNameTextField: UITextField! {
+        didSet {
+            groupNameTextField.delegate = self
+        }
+    }
     @IBOutlet weak var descriptionTextArea: UITextView! {
         didSet {
             descriptionTextArea.delegate = self
@@ -20,6 +24,7 @@ class EditHeaderCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var makeActiveButton: UIButton!
     var delegate : HeaderCellDelegate?
     
+    @IBOutlet weak var containerView: UIView!
     
     class var cellHeight : CGFloat { get { return 145 } }
     
@@ -32,6 +37,7 @@ class EditHeaderCell: UITableViewCell, UITextViewDelegate {
     
     func updateUI(){
         guard group != nil else { return }
+        saveButton.setTitle("Cancel", for: .normal)
         groupNameTextField.text = group?.name
         descriptionTextArea.text = (group?.desc != "" ? group?.desc : "Edit description")
         descriptionTextArea.layer.cornerRadius = 2
@@ -70,4 +76,14 @@ class EditHeaderCell: UITableViewCell, UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
         if descriptionTextArea.text == "" { descriptionTextArea.text = "Edit description" }
     }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        saveButton.setTitle("Save", for: .normal)
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        saveButton.setTitle("Save", for: .normal)
+        return true
+    }
+    
 }
