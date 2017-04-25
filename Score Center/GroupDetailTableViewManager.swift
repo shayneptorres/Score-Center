@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GroupTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource {
+class GroupDetailTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSource {
     
     override init() {
         super.init()
@@ -135,7 +135,7 @@ class GroupTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension GroupTableViewManager : HeaderCellDelegate {
+extension GroupDetailTableViewManager : HeaderCellDelegate {
     func showEditMode() {
         headerDisplayMode = .editing
     }

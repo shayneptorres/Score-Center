@@ -27,9 +27,12 @@ class GroupsViewController: UIViewController {
         }
     }
     var selectedGroup = Group()
+    var manager = GroupsTableViewManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = UIColor.appBlue()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         reloadData()
     }
     

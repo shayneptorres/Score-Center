@@ -16,4 +16,5 @@ protocol HeaderCellDelegate {
 
 protocol ScoreManagerDelegate {
     func reloadData()
+    func showTabBar()
 }

@@ -35,10 +35,38 @@
                             <constraint firstItem="f1B-r4-mCw" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="lAl-y4-bZr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5K2-MI-eas"/>
+                    <navigationItem key="navigationItem" id="5K2-MI-eas">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="Active Group" id="Eow-Hs-snw"/>
+                        <view key="titleView" contentMode="scaleToFill" id="uhN-9o-WO0">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idi-N7-hee">
+                                    <rect key="frame" x="41.5" y="5" width="68" height="24"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="idi-N7-hee" firstAttribute="centerY" secondItem="uhN-9o-WO0" secondAttribute="centerY" id="DH5-T3-zHp"/>
+                                <constraint firstItem="idi-N7-hee" firstAttribute="centerX" secondItem="uhN-9o-WO0" secondAttribute="centerX" id="ENr-zX-Omn"/>
+                            </constraints>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="dotsButton" id="Fec-d1-BdI">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="settingsButtonWasPressed:" destination="BYZ-38-t0r" id="6fc-9n-dKd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="messageLabel" destination="idi-N7-hee" id="7PE-Gd-08o"/>
                         <outlet property="tableView" destination="f1B-r4-mCw" id="Odm-gr-zrN"/>
                         <segue destination="90q-2r-AWI" kind="presentation" identifier="showScoreEditor" id="uhn-Oq-O8r"/>
+                        <segue destination="CEK-bh-caG" kind="show" identifier="showActiveGroupSettings" id="Loq-4L-9ar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -288,6 +316,86 @@
             </objects>
             <point key="canvasLocation" x="1076" y="895.50224887556226"/>
         </scene>
+        <!--Active Group SettingsVC-->
+        <scene sceneID="Mso-uU-ezo">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="CEK-bh-caG" customClass="ActiveGroupSettingsVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M8i-b8-uZ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ubq-PC-fpK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P0o-Pe-46j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6n-4f-KYY">
+                                <rect key="frame" x="0.0" y="84" width="375" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vwb-EL-LpI"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeGroupButtonWasPressed:" destination="CEK-bh-caG" eventType="touchUpInside" id="Li7-1y-BAa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change active group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-FM-9mG">
+                                <rect key="frame" x="24" y="94" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="N6n-4f-KYY" secondAttribute="trailing" id="Ewu-Us-DbZ"/>
+                            <constraint firstItem="3ii-FM-9mG" firstAttribute="centerY" secondItem="N6n-4f-KYY" secondAttribute="centerY" id="Okj-On-Oxx"/>
+                            <constraint firstItem="3ii-FM-9mG" firstAttribute="leading" secondItem="P0o-Pe-46j" secondAttribute="leadingMargin" constant="8" id="TKC-y2-Ku4"/>
+                            <constraint firstItem="N6n-4f-KYY" firstAttribute="leading" secondItem="P0o-Pe-46j" secondAttribute="leading" id="j7i-gY-g6V"/>
+                            <constraint firstItem="N6n-4f-KYY" firstAttribute="top" secondItem="M8i-b8-uZ0" secondAttribute="bottom" constant="20" id="sSW-Bu-csx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeGroupButton" destination="N6n-4f-KYY" id="eYw-AT-vyp"/>
+                        <segue destination="Gvr-Ty-fHa" kind="show" identifier="showGroupsVC" id="GNa-o4-yVb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2e-96-Itk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3174" y="-582"/>
+        </scene>
+        <!--Select Active GroupVC-->
+        <scene sceneID="sYt-sD-jSA">
+            <objects>
+                <viewController id="Gvr-Ty-fHa" customClass="SelectActiveGroupVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1r8-Q7-0Qh"/>
+                        <viewControllerLayoutGuide type="bottom" id="OSI-Ef-vuT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jeS-4O-gsG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-eQ-sbw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M3b-eQ-sbw" firstAttribute="leading" secondItem="jeS-4O-gsG" secondAttribute="leading" id="7RU-Eu-5yy"/>
+                            <constraint firstItem="OSI-Ef-vuT" firstAttribute="top" secondItem="M3b-eQ-sbw" secondAttribute="bottom" id="EsE-3b-Dyn"/>
+                            <constraint firstAttribute="trailing" secondItem="M3b-eQ-sbw" secondAttribute="trailing" id="gLe-BH-8yo"/>
+                            <constraint firstItem="M3b-eQ-sbw" firstAttribute="top" secondItem="jeS-4O-gsG" secondAttribute="top" id="vuR-vS-1EY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="M3b-eQ-sbw" id="x97-hH-AR1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r18-lq-fa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4000.8000000000002" y="-580.65967016491754"/>
+        </scene>
         <!--Score ManagerVC-->
         <scene sceneID="qUt-Fg-oIC">
             <objects>
@@ -335,31 +443,28 @@
                                             <action selector="removePoints:" destination="90q-2r-AWI" eventType="touchUpInside" id="R2g-9a-sxv"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Team name and current score" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fiF-re-QRE" customClass="AppTextField" customModule="Score_Center" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="85" width="263" height="45"/>
-                                        <color key="backgroundColor" red="0.69348553540000002" green="0.69348553540000002" blue="0.69348553540000002" alpha="0.30463248240000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="L5S-iQ-Tfv"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No team selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZI-m5-kPG">
+                                        <rect key="frame" x="20" y="94" width="262.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                    </textField>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Rlr-7I-JG3" firstAttribute="leading" secondItem="YCW-tY-jdG" secondAttribute="trailing" constant="20" id="01r-ZD-dmP"/>
+                                    <constraint firstItem="fZI-m5-kPG" firstAttribute="top" secondItem="MkZ-8s-Xq0" secondAttribute="bottom" constant="29" id="7jf-X8-QCX"/>
+                                    <constraint firstItem="fZI-m5-kPG" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="98z-yf-rg0"/>
                                     <constraint firstItem="YCW-tY-jdG" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="9DX-wa-6iN"/>
-                                    <constraint firstAttribute="trailing" secondItem="fiF-re-QRE" secondAttribute="trailing" constant="20" id="Atk-jN-JGk"/>
                                     <constraint firstAttribute="bottom" secondItem="YCW-tY-jdG" secondAttribute="bottom" constant="20" id="KCZ-hK-dW6"/>
                                     <constraint firstAttribute="trailing" secondItem="MkZ-8s-Xq0" secondAttribute="trailing" constant="20" id="M3O-pm-NrM"/>
                                     <constraint firstAttribute="bottom" secondItem="Rlr-7I-JG3" secondAttribute="bottom" constant="20" id="Wk0-lc-yjG"/>
-                                    <constraint firstItem="fiF-re-QRE" firstAttribute="top" secondItem="MkZ-8s-Xq0" secondAttribute="bottom" constant="20" id="aZY-3A-wMz"/>
+                                    <constraint firstItem="fZI-m5-kPG" firstAttribute="centerX" secondItem="MkZ-8s-Xq0" secondAttribute="centerX" id="h8S-Wu-5ac"/>
                                     <constraint firstItem="MkZ-8s-Xq0" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="kyD-hU-k3G"/>
                                     <constraint firstItem="YCW-tY-jdG" firstAttribute="width" secondItem="Rlr-7I-JG3" secondAttribute="width" id="lLM-qf-NHz"/>
+                                    <constraint firstAttribute="trailing" secondItem="fZI-m5-kPG" secondAttribute="trailing" constant="20" id="mnR-Ll-sd5"/>
                                     <constraint firstAttribute="trailing" secondItem="Rlr-7I-JG3" secondAttribute="trailing" constant="20" id="oAR-Fd-y9G"/>
                                     <constraint firstItem="MkZ-8s-Xq0" firstAttribute="top" secondItem="3vH-oj-KCy" secondAttribute="top" constant="20" id="odB-hJ-2RF"/>
-                                    <constraint firstItem="fiF-re-QRE" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="pjb-j7-lXg"/>
                                     <constraint firstAttribute="height" constant="200" id="zhT-x7-Yv6"/>
                                 </constraints>
                             </view>
@@ -388,19 +493,20 @@
                         <outlet property="addPointButton" destination="YCW-tY-jdG" id="iro-Hx-G1R"/>
                         <outlet property="pointsTextField" destination="MkZ-8s-Xq0" id="EfC-X7-Goc"/>
                         <outlet property="removePointsButton" destination="Rlr-7I-JG3" id="g1P-AD-Vmq"/>
-                        <outlet property="teamTextField" destination="fiF-re-QRE" id="mST-6l-b4e"/>
+                        <outlet property="teamLabel" destination="fZI-m5-kPG" id="nkf-EJ-I4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqu-jB-UFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="137"/>
+            <point key="canvasLocation" x="3570" y="137"/>
         </scene>
     </scenes>
     <resources>
         <image name="cancelXButton" width="226" height="226"/>
+        <image name="dotsButton" width="7" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="PYQ-UF-e9N"/>
         <segue reference="uhn-Oq-O8r"/>
-        <segue reference="Etz-uh-kTY"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -17,8 +17,9 @@ class ActiveGroupVC: UIViewController {
         }
     }
     
-    var tableViewDelegate = GroupTableViewManager()
+    var tableViewDelegate = GroupDetailTableViewManager()
     
+    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableViewDelegate.tableView = tableView
@@ -36,6 +37,8 @@ class ActiveGroupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.isHidden = true
+        self.navigationController?.navigationBar.barTintColor = UIColor.appBlue()
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,12 +62,18 @@ class ActiveGroupVC: UIViewController {
         case "showScoreEditor":
             guard let smvc = segue.destination as? ScoreManagerVC,
                 let selectedTeam = tableViewDelegate.selectedTeam else {return}
+            self.tabBarController?.tabBar.isHidden = true
             smvc.team = selectedTeam
             smvc.delegate = self
         default:
             break
         }
     }
+    
+    @IBAction func settingsButtonWasPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: SegueIdentifiers.showActiveGroupSettings.rawValue, sender: self)
+    }
+    
 }
 
 extension ActiveGroupVC : AddObjectDelegate, ScoreManagerDelegate {
@@ -84,5 +93,6 @@ extension ActiveGroupVC : AddObjectDelegate, ScoreManagerDelegate {
     }
     
     func showTabBar() {
+        tabBarController?.tabBar.isHidden = false
     }
 }

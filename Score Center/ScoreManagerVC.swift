@@ -11,7 +11,8 @@ import UIKit
 class ScoreManagerVC: UIViewController {
     
     @IBOutlet weak var pointsTextField: AppTextField!
-    @IBOutlet weak var teamTextField: AppTextField!
+    @IBOutlet weak var teamLabel: UILabel!
+    
     
     @IBOutlet weak var addPointButton: UIButton!
     @IBOutlet weak var removePointsButton: UIButton!
@@ -24,11 +25,15 @@ class ScoreManagerVC: UIViewController {
         updateUI()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        delegate?.showTabBar()
+    }
     
     /// Updates the UI elements of the view controller
     func updateUI(){
         guard let team = team else {return}
-        teamTextField.text = "\(team.name) - \(team.score)"
+        teamLabel.text = "\(team.name) with \(team.score.toDecimalFormat())pts"
     }
     
     

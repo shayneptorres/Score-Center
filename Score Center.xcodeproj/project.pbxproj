@@ -10,6 +10,10 @@
 		4DAF1252E954D528E26B02C5 /* Pods_Score_CenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */; };
 		90813E85B2C7E67A6C90E9E3 /* Pods_Score_CenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4FB1F44027D14AE223A14A /* Pods_Score_CenterTests.framework */; };
 		B80DA39B1EA0612F00770317 /* RealmManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80DA39A1EA0612F00770317 /* RealmManagable.swift */; };
+		B830B9AB1EAEDBE90075F481 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9AA1EAEDBE90075F481 /* Colors.swift */; };
+		B830B9AE1EAEE9700075F481 /* ActiveGroupSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9AD1EAEE9700075F481 /* ActiveGroupSettingsVC.swift */; };
+		B830B9B01EAEF2A40075F481 /* GroupsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9AF1EAEF2A40075F481 /* GroupsTableViewManager.swift */; };
+		B830B9B21EAEFC580075F481 /* SelectActiveGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9B11EAEFC580075F481 /* SelectActiveGroupVC.swift */; };
 		B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831C3BA1E6E58FC0097A76B /* ShadowService.swift */; };
 		B831C3BD1E6E59340097A76B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831C3BC1E6E59340097A76B /* UIView.swift */; };
 		B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B831C3BE1E6E59F20097A76B /* UIColor.swift */; };
@@ -37,7 +41,7 @@
 		B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216861EA9ED0900666917 /* TeamCell.swift */; };
 		B8F216891EA9ED0900666917 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8F216871EA9ED0900666917 /* TeamCell.xib */; };
 		B8FC0E671EAB40480092D46F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC0E661EAB40480092D46F /* Extensions.swift */; };
-		B8FC0E691EAB42D80092D46F /* GroupDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC0E681EAB42D80092D46F /* GroupDetailTableView.swift */; };
+		B8FC0E691EAB42D80092D46F /* GroupDetailTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC0E681EAB42D80092D46F /* GroupDetailTableViewManager.swift */; };
 		B8FC53FF1E6FB3CF0078E1D5 /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */; };
 		B8FC54021E7139C00078E1D5 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC54011E7139C00078E1D5 /* AppTextField.swift */; };
 		B8FC54041E7245B00078E1D5 /* GroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */; };
@@ -70,6 +74,10 @@
 		5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Score_CenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7016213C0EE6B504DADED1CB /* Pods-Score CenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Score CenterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Score CenterUITests/Pods-Score CenterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B80DA39A1EA0612F00770317 /* RealmManagable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManagable.swift; sourceTree = "<group>"; };
+		B830B9AA1EAEDBE90075F481 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B830B9AD1EAEE9700075F481 /* ActiveGroupSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupSettingsVC.swift; sourceTree = "<group>"; };
+		B830B9AF1EAEF2A40075F481 /* GroupsTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewManager.swift; sourceTree = "<group>"; };
+		B830B9B11EAEFC580075F481 /* SelectActiveGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActiveGroupVC.swift; sourceTree = "<group>"; };
 		B831C3BA1E6E58FC0097A76B /* ShadowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowService.swift; sourceTree = "<group>"; };
 		B831C3BC1E6E59340097A76B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		B831C3BE1E6E59F20097A76B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -103,7 +111,7 @@
 		B8F216861EA9ED0900666917 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		B8F216871EA9ED0900666917 /* TeamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
 		B8FC0E661EAB40480092D46F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		B8FC0E681EAB42D80092D46F /* GroupDetailTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTableView.swift; sourceTree = "<group>"; };
+		B8FC0E681EAB42D80092D46F /* GroupDetailTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailTableViewManager.swift; sourceTree = "<group>"; };
 		B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
 		B8FC54011E7139C00078E1D5 /* AppTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
 		B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewController.swift; sourceTree = "<group>"; };
@@ -141,11 +149,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B830B9AC1EAEE9500075F481 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B830B9AD1EAEE9700075F481 /* ActiveGroupSettingsVC.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		B857DDE31EA266A8003A00BF /* Groups */ = {
 			isa = PBXGroup;
 			children = (
 				B8FC54031E7245B00078E1D5 /* GroupDetailViewController.swift */,
 				B888F9DC1E6E48060036A188 /* GroupsViewController.swift */,
+				B830B9B11EAEFC580075F481 /* SelectActiveGroupVC.swift */,
 			);
 			name = Groups;
 			sourceTree = "<group>";
@@ -238,6 +255,7 @@
 		B888F9D01E6D4BC50036A188 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B830B9AC1EAEE9500075F481 /* Settings */,
 				B8F216851EA9E4BE00666917 /* Teams */,
 				B857DDE31EA266A8003A00BF /* Groups */,
 				B8FC54051E7260460078E1D5 /* AddObjectViewController.swift */,
@@ -287,6 +305,7 @@
 				B8F2167F1EA9DA5100666917 /* Enums.swift */,
 				B8F216811EA9DBE900666917 /* Protocols.swift */,
 				B8FC0E661EAB40480092D46F /* Extensions.swift */,
+				B830B9AA1EAEDBE90075F481 /* Colors.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -303,7 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				B8FC54011E7139C00078E1D5 /* AppTextField.swift */,
-				B8FC0E681EAB42D80092D46F /* GroupDetailTableView.swift */,
+				B8FC0E681EAB42D80092D46F /* GroupDetailTableViewManager.swift */,
+				B830B9AF1EAEF2A40075F481 /* GroupsTableViewManager.swift */,
 			);
 			name = Suclasses;
 			sourceTree = "<group>";
@@ -620,13 +640,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8FC0E671EAB40480092D46F /* Extensions.swift in Sources */,
+				B830B9AE1EAEE9700075F481 /* ActiveGroupSettingsVC.swift in Sources */,
 				B80DA39B1EA0612F00770317 /* RealmManagable.swift in Sources */,
 				B8FC53FF1E6FB3CF0078E1D5 /* AddGroupViewController.swift in Sources */,
 				B8FC54061E7260460078E1D5 /* AddObjectViewController.swift in Sources */,
 				B888F9E01E6E497B0036A188 /* GroupTableViewCell.swift in Sources */,
 				B888F9A01E6C67F90036A188 /* AppDelegate.swift in Sources */,
+				B830B9AB1EAEDBE90075F481 /* Colors.swift in Sources */,
 				B844255F1EAAB1CF007CA321 /* ScoreManagerVC.swift in Sources */,
 				B888F9D61E6E45340036A188 /* GroupService.swift in Sources */,
+				B830B9B21EAEFC580075F481 /* SelectActiveGroupVC.swift in Sources */,
 				B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */,
 				B8FC54041E7245B00078E1D5 /* GroupDetailViewController.swift in Sources */,
 				B888F9DD1E6E48060036A188 /* GroupsViewController.swift in Sources */,
@@ -635,12 +658,13 @@
 				B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */,
 				B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */,
 				B888F9DB1E6E46B30036A188 /* Team.swift in Sources */,
-				B8FC0E691EAB42D80092D46F /* GroupDetailTableView.swift in Sources */,
+				B8FC0E691EAB42D80092D46F /* GroupDetailTableViewManager.swift in Sources */,
 				B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */,
 				B831C3BD1E6E59340097A76B /* UIView.swift in Sources */,
 				B888F9D91E6E45CC0036A188 /* Date.swift in Sources */,
 				B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */,
 				B8F216801EA9DA5100666917 /* Enums.swift in Sources */,
+				B830B9B01EAEF2A40075F481 /* GroupsTableViewManager.swift in Sources */,
 				B85470BC1EAACE4B0016B714 /* ActiveGroupVC.swift in Sources */,
 				B8FC54021E7139C00078E1D5 /* AppTextField.swift in Sources */,
 			);

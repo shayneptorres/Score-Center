@@ -55,7 +55,7 @@ class EditHeaderCell: UITableViewCell, UITextViewDelegate, UITextFieldDelegate {
     
     @IBAction func makeActive(_ sender: UIButton) {
         guard let delegate = delegate, let group = group else {return}
-        UserDefaults.standard.set(group.id, forKey: UserDefaultsKey.activeGroup.rawValue)
+        Group.setActiveGroup(withId: group.id)
         delegate.showDisplayMode()
     }
     

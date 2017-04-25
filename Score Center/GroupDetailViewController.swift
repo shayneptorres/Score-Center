@@ -10,7 +10,7 @@ import UIKit
 
 class GroupDetailViewController: UIViewController {
     
-    var tableViewDelegate = GroupTableViewManager()
+    var tableViewDelegate = GroupDetailTableViewManager()
 
     @IBOutlet weak var tableView: UITableView! {
         didSet {

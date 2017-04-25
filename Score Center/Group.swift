@@ -30,4 +30,8 @@ class Group : Object, RealmManagable {
             self.updatedAt = Date.timeStamp()
         }
     }
+    
+    class func setActiveGroup(withId id: Int) {
+        UserDefaults.standard.set(id, forKey: UserDefaultsKey.activeGroup.rawValue)
+    }
 }

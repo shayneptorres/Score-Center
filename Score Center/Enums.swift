@@ -23,6 +23,13 @@ enum Update : String {
     case groupsUpdated = "groupsUpdated"
 }
 
+enum SegueIdentifiers : String {
+    case showScoreEditor = "showScoreEditor"
+    case showActiveGroupSettings = "showActiveGroupSettings"
+    case showGroupDetail = "showGroupDetail"
+    case showGroupsVC = "showGroupsVC"
+}
+
 /// Determines what type of header cell will be dispplayed on the groups detail VC
 ///
 /// - editing: used when editing the group
