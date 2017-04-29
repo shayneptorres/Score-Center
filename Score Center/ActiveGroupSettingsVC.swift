@@ -25,5 +25,22 @@ class ActiveGroupSettingsVC: UIViewController {
         performSegue(withIdentifier: SegueIdentifiers.showGroupsVC.rawValue, sender: self)
     }
     
+    @IBAction func addPresetPointsButtonWasPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: SegueIdentifiers.showPresetPoints.rawValue, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {return}
+        switch identifier {
+        case SegueIdentifiers.showPresetPoints.rawValue:
+            guard let sppvc = segue.destination as? PresetPointsVC, let id = UserDefaults.standard.value(forKey: UserDefaultsKey.activeGroup.rawValue) as? Int,
+                let actGroup = Group.getOne(withId: id) as? Group else {
+                return
+            }
+            sppvc.group = actGroup
+        default:
+            break
+        }
+    }
 
 }

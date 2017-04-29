@@ -13,6 +13,7 @@ class ScoreManagerVC: UIViewController {
     @IBOutlet weak var pointsTextField: AppTextField!
     @IBOutlet weak var teamLabel: UILabel!
     
+    @IBOutlet weak var formContainer: UIView!
     
     @IBOutlet weak var addPointButton: UIButton!
     @IBOutlet weak var removePointsButton: UIButton!
@@ -25,6 +26,11 @@ class ScoreManagerVC: UIViewController {
         updateUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        pointsTextField.becomeFirstResponder()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         delegate?.showTabBar()
@@ -34,6 +40,14 @@ class ScoreManagerVC: UIViewController {
     func updateUI(){
         guard let team = team else {return}
         teamLabel.text = "\(team.name) with \(team.score.toDecimalFormat())pts"
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapDismiss))
+        tap.delegate = self
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    func tapDismiss(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -58,4 +72,17 @@ class ScoreManagerVC: UIViewController {
     @IBAction func cancel(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension ScoreManagerVC : UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: self.formContainer))! {
+            return false
+        }
+        return true
+    }
+}
+
+extension ScoreManagerVC : UITextFieldDelegate {
+    
 }

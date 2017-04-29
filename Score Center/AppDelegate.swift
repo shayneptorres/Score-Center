@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var config = Realm.Configuration()
         config.fileURL = config.fileURL!.deletingLastPathComponent()
-            .appendingPathComponent("sc-0_0_2.realm")
+            .appendingPathComponent("sc-0_0_3.realm")
         
         // Set this as the configuration used for the default Realm
         Realm.Configuration.defaultConfiguration = config

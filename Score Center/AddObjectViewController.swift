@@ -21,6 +21,7 @@ enum AddObjectValue {
 class AddObjectViewController: UIViewController {
 
     @IBOutlet weak var objectNameTextField: AppTextField!
+    @IBOutlet weak var formContainer: UIView!
     
     var delegate : AddObjectDelegate?
     var addObjectValue = AddObjectValue.group
@@ -30,6 +31,18 @@ class AddObjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapDismiss))
+        tap.delegate = self
+        view.addGestureRecognizer(tap)
+    }
+    
+    func tapDismiss(){
+        self.dismiss(animated: true, completion: {self.delegate?.showTabBar()})
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        objectNameTextField.becomeFirstResponder()
     }
     
     func updateUI(){
@@ -67,6 +80,13 @@ class AddObjectViewController: UIViewController {
         
         self.dismiss(animated: true, completion: {self.delegate?.showTabBar()})
     }
-    
+}
 
+extension AddObjectViewController : UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if (touch.view?.isDescendant(of: formContainer))! {
+            return false
+        }
+        return true
+    }
 }

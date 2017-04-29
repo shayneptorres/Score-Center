@@ -51,6 +51,12 @@ class EditHeaderCell: UITableViewCell, UITextViewDelegate, UITextFieldDelegate {
         } else {
             makeActiveButton.isHidden = false
         }
+        
+        descriptionTextArea.layer.masksToBounds = false
+        descriptionTextArea.layer.shadowRadius = 3.0
+        descriptionTextArea.layer.shadowColor = UIColor.black.cgColor
+        descriptionTextArea.layer.shadowOffset = CGSize(width: 1, height: 1)
+        descriptionTextArea.layer.shadowOpacity = 0.3
     }
     
     @IBAction func makeActive(_ sender: UIButton) {

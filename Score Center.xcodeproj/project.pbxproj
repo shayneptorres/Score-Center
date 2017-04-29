@@ -20,6 +20,10 @@
 		B844255F1EAAB1CF007CA321 /* ScoreManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B844255E1EAAB1CF007CA321 /* ScoreManagerVC.swift */; };
 		B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */; };
 		B84BAFD11EA4930F00228B56 /* EditHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */; };
+		B8515CA91EB1D5FF00D95A14 /* PresetPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8515CA81EB1D5FF00D95A14 /* PresetPoint.swift */; };
+		B8515CAB1EB1D89300D95A14 /* PresetPointsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8515CAA1EB1D89300D95A14 /* PresetPointsVC.swift */; };
+		B8515CAE1EB1DB0A00D95A14 /* PresetPointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8515CAC1EB1DB0A00D95A14 /* PresetPointCell.swift */; };
+		B8515CAF1EB1DB0A00D95A14 /* PresetPointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8515CAD1EB1DB0A00D95A14 /* PresetPointCell.xib */; };
 		B85470BC1EAACE4B0016B714 /* ActiveGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */; };
 		B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */; };
 		B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */; };
@@ -36,6 +40,7 @@
 		B888F9DD1E6E48060036A188 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9DC1E6E48060036A188 /* GroupsViewController.swift */; };
 		B888F9E01E6E497B0036A188 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9DE1E6E497B0036A188 /* GroupTableViewCell.swift */; };
 		B888F9E11E6E497B0036A188 /* GroupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B888F9DF1E6E497B0036A188 /* GroupTableViewCell.xib */; };
+		B8AA1D641EB3222700CC552F /* AddPresetScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA1D631EB3222700CC552F /* AddPresetScoreCell.swift */; };
 		B8F216801EA9DA5100666917 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2167F1EA9DA5100666917 /* Enums.swift */; };
 		B8F216821EA9DBE900666917 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216811EA9DBE900666917 /* Protocols.swift */; };
 		B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216861EA9ED0900666917 /* TeamCell.swift */; };
@@ -84,6 +89,10 @@
 		B844255E1EAAB1CF007CA321 /* ScoreManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManagerVC.swift; sourceTree = "<group>"; };
 		B84BAFCE1EA4930F00228B56 /* EditHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditHeaderCell.swift; sourceTree = "<group>"; };
 		B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditHeaderCell.xib; sourceTree = "<group>"; };
+		B8515CA81EB1D5FF00D95A14 /* PresetPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPoint.swift; sourceTree = "<group>"; };
+		B8515CAA1EB1D89300D95A14 /* PresetPointsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointsVC.swift; sourceTree = "<group>"; };
+		B8515CAC1EB1DB0A00D95A14 /* PresetPointCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointCell.swift; sourceTree = "<group>"; };
+		B8515CAD1EB1DB0A00D95A14 /* PresetPointCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresetPointCell.xib; sourceTree = "<group>"; };
 		B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupVC.swift; sourceTree = "<group>"; };
 		B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupHeaderCell.swift; sourceTree = "<group>"; };
 		B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeaderCell.xib; sourceTree = "<group>"; };
@@ -106,6 +115,7 @@
 		B888F9DC1E6E48060036A188 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		B888F9DE1E6E497B0036A188 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		B888F9DF1E6E497B0036A188 /* GroupTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupTableViewCell.xib; sourceTree = "<group>"; };
+		B8AA1D631EB3222700CC552F /* AddPresetScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPresetScoreCell.swift; sourceTree = "<group>"; };
 		B8F2167F1EA9DA5100666917 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B8F216811EA9DBE900666917 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B8F216861EA9ED0900666917 /* TeamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
@@ -238,6 +248,7 @@
 			children = (
 				B888F9D21E6E44290036A188 /* Group.swift */,
 				B888F9DA1E6E46B30036A188 /* Team.swift */,
+				B8515CA81EB1D5FF00D95A14 /* PresetPoint.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 				B8FC54051E7260460078E1D5 /* AddObjectViewController.swift */,
 				B8FC53FE1E6FB3CF0078E1D5 /* AddGroupViewController.swift */,
 				B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */,
+				B8515CAA1EB1D89300D95A14 /* PresetPointsVC.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -295,6 +307,9 @@
 				B84BAFCF1EA4930F00228B56 /* EditHeaderCell.xib */,
 				B8F216861EA9ED0900666917 /* TeamCell.swift */,
 				B8F216871EA9ED0900666917 /* TeamCell.xib */,
+				B8515CAC1EB1DB0A00D95A14 /* PresetPointCell.swift */,
+				B8515CAD1EB1DB0A00D95A14 /* PresetPointCell.xib */,
+				B8AA1D631EB3222700CC552F /* AddPresetScoreCell.swift */,
 			);
 			name = nibs;
 			sourceTree = "<group>";
@@ -428,7 +443,7 @@
 				TargetAttributes = {
 					B888F99B1E6C67F90036A188 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = ZC55HLSXNP;
+						DevelopmentTeam = 22K6B48Y8T;
 						ProvisioningStyle = Automatic;
 					};
 					B888F9AF1E6C67F90036A188 = {
@@ -471,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84BAFD11EA4930F00228B56 /* EditHeaderCell.xib in Resources */,
+				B8515CAF1EB1DB0A00D95A14 /* PresetPointCell.xib in Resources */,
 				B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */,
 				B8F216891EA9ED0900666917 /* TeamCell.xib in Resources */,
 				B888F9AA1E6C67F90036A188 /* LaunchScreen.storyboard in Resources */,
@@ -650,6 +666,7 @@
 				B844255F1EAAB1CF007CA321 /* ScoreManagerVC.swift in Sources */,
 				B888F9D61E6E45340036A188 /* GroupService.swift in Sources */,
 				B830B9B21EAEFC580075F481 /* SelectActiveGroupVC.swift in Sources */,
+				B8AA1D641EB3222700CC552F /* AddPresetScoreCell.swift in Sources */,
 				B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */,
 				B8FC54041E7245B00078E1D5 /* GroupDetailViewController.swift in Sources */,
 				B888F9DD1E6E48060036A188 /* GroupsViewController.swift in Sources */,
@@ -658,10 +675,13 @@
 				B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */,
 				B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */,
 				B888F9DB1E6E46B30036A188 /* Team.swift in Sources */,
+				B8515CA91EB1D5FF00D95A14 /* PresetPoint.swift in Sources */,
+				B8515CAB1EB1D89300D95A14 /* PresetPointsVC.swift in Sources */,
 				B8FC0E691EAB42D80092D46F /* GroupDetailTableViewManager.swift in Sources */,
 				B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */,
 				B831C3BD1E6E59340097A76B /* UIView.swift in Sources */,
 				B888F9D91E6E45CC0036A188 /* Date.swift in Sources */,
+				B8515CAE1EB1DB0A00D95A14 /* PresetPointCell.swift in Sources */,
 				B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */,
 				B8F216801EA9DA5100666917 /* Enums.swift in Sources */,
 				B830B9B01EAEF2A40075F481 /* GroupsTableViewManager.swift in Sources */,
@@ -817,7 +837,7 @@
 			baseConfigurationReference = 29B35D3767DB727EC7D16F9E /* Pods-Score Center.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZC55HLSXNP;
+				DEVELOPMENT_TEAM = 22K6B48Y8T;
 				INFOPLIST_FILE = "Score Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-Center";
@@ -831,7 +851,7 @@
 			baseConfigurationReference = 247726F407B6899FA7A795C7 /* Pods-Score Center.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZC55HLSXNP;
+				DEVELOPMENT_TEAM = 22K6B48Y8T;
 				INFOPLIST_FILE = "Score Center/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-Center";

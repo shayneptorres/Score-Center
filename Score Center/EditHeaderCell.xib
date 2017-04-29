@@ -21,9 +21,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Va6-lI-SdV">
                         <rect key="frame" x="0.0" y="8" width="365" height="128"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWE-0e-EK4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWE-0e-EK4" customClass="AppTextField" customModule="Score_Center" customModuleProvider="target">
                                 <rect key="frame" x="108" y="8" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0m2-Sk-VhG"/>
                                     <constraint firstAttribute="width" constant="150" id="y7g-zI-Re9"/>
                                 </constraints>
                                 <nil key="textColor"/>

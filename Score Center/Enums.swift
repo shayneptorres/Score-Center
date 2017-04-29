@@ -13,6 +13,7 @@ enum CellIdentifier : String {
     case groupHeaderCell = "GROUP_HEADER_CELL"
     case editHeaderCell = "EDIT_HEADER_CELL"
     case teamCell = "TEAM_CELL"
+    case presetPointCell = "PRESET_POINT_CELL"
 }
 
 enum UserDefaultsKey : String {
@@ -28,6 +29,7 @@ enum SegueIdentifiers : String {
     case showActiveGroupSettings = "showActiveGroupSettings"
     case showGroupDetail = "showGroupDetail"
     case showGroupsVC = "showGroupsVC"
+    case showPresetPoints = "showPresetPoints"
 }
 
 /// Determines what type of header cell will be dispplayed on the groups detail VC

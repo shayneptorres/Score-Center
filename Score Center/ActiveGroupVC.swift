@@ -14,6 +14,7 @@ class ActiveGroupVC: UIViewController {
         didSet {
             tableView.reloadData()
             tableView.isHidden = false
+            activeGroupMessageLabel.isHidden = true
         }
     }
     
@@ -25,6 +26,7 @@ class ActiveGroupVC: UIViewController {
             tableViewDelegate.tableView = tableView
         }
     }
+    @IBOutlet weak var activeGroupMessageLabel: UILabel!
     
     var selectedTeam : Team?
     
@@ -37,6 +39,7 @@ class ActiveGroupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.isHidden = true
+        activeGroupMessageLabel.isHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor.appBlue()
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }

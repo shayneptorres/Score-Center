@@ -16,7 +16,9 @@ class Group : Object, RealmManagable {
     dynamic var createdAt = Date()
     dynamic var updatedAt = Date()
     var teams = List<Team>()
+    var presetPoints = List<PresetPoint>()
     var isActive = Bool()
+    
     typealias RealmObject = Group
     
     override static func primaryKey() -> String? {
