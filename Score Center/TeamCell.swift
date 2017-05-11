@@ -14,6 +14,7 @@ class TeamCell: UITableViewCell {
     @IBOutlet weak var teamNameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var pointBannerImage: UIImageView!
     
     
     var team : Team? {
@@ -29,6 +30,12 @@ class TeamCell: UITableViewCell {
         rankLabel.text = rank.ordinalString()
         teamNameLabel.text = team.name
         pointsLabel.text = "\(team.score.toDecimalFormat())pts"
+        switch rank {
+        case 1...3:
+            pointBannerImage.image = UIImage(named: "\(rank)place")
+        default:
+            pointBannerImage.image = UIImage(named: "defaultPlace")
+        }
     }
     
 }

@@ -62,12 +62,6 @@ class ActiveGroupVC: UIViewController {
             aovc.addObjectValue = .team
             aovc.group = self.group
             aovc.delegate = self
-        case "showScoreEditor":
-            guard let smvc = segue.destination as? ScoreManagerVC,
-                let selectedTeam = tableViewDelegate.selectedTeam else {return}
-            self.tabBarController?.tabBar.isHidden = true
-            smvc.team = selectedTeam
-            smvc.delegate = self
         default:
             break
         }

@@ -16,6 +16,13 @@ class ActiveGroupSettingsVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var addPresetPointsButton: UIButton! {
+        didSet {
+            addPresetPointsButton.applyShadow()
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationItem.title = "Settings"

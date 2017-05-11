@@ -70,6 +70,7 @@ class AddObjectViewController: UIViewController {
             UserDefaults.standard.setValue(true, forKey: Update.groupsUpdated.rawValue)
             break
         }
+        objectNameTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: {
             self.delegate?.reloadData()
             self.delegate?.showTabBar()
@@ -87,6 +88,7 @@ extension AddObjectViewController : UIGestureRecognizerDelegate {
         if (touch.view?.isDescendant(of: formContainer))! {
             return false
         }
+        objectNameTextField.resignFirstResponder()
         return true
     }
 }

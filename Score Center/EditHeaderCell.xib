@@ -33,20 +33,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fIR-ph-GAj">
-                                <rect key="frame" x="8" y="46" width="349" height="74"/>
+                                <rect key="frame" x="8" y="48" width="349" height="72"/>
                                 <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-04-5bh">
-                                <rect key="frame" x="311" y="8" width="34" height="30"/>
+                                <rect key="frame" x="315" y="8" width="30" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="save:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LRf-ab-PYH"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hF-fT-c2M">
-                                <rect key="frame" x="10" y="8" width="84" height="30"/>
+                                <rect key="frame" x="10" y="9.5" width="67" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                 <state key="normal" title="Make Active"/>
                                 <connections>
                                     <action selector="makeActive:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Aw4-hq-scw"/>

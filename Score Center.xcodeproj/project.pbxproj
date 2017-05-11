@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4DAF1252E954D528E26B02C5 /* Pods_Score_CenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */; };
 		90813E85B2C7E67A6C90E9E3 /* Pods_Score_CenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4FB1F44027D14AE223A14A /* Pods_Score_CenterTests.framework */; };
+		B80006431EBD6CA500A7ADCA /* PresetPointsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80006421EBD6CA500A7ADCA /* PresetPointsTableHeader.swift */; };
 		B80DA39B1EA0612F00770317 /* RealmManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80DA39A1EA0612F00770317 /* RealmManagable.swift */; };
 		B830B9AB1EAEDBE90075F481 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9AA1EAEDBE90075F481 /* Colors.swift */; };
 		B830B9AE1EAEE9700075F481 /* ActiveGroupSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9AD1EAEE9700075F481 /* ActiveGroupSettingsVC.swift */; };
@@ -27,6 +28,7 @@
 		B85470BC1EAACE4B0016B714 /* ActiveGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */; };
 		B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */; };
 		B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */; };
+		B886D18F1EBE82C80046CA76 /* PresetPointCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B886D18E1EBE82C80046CA76 /* PresetPointCollectionCell.swift */; };
 		B888F9A01E6C67F90036A188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F99F1E6C67F90036A188 /* AppDelegate.swift */; };
 		B888F9A51E6C67F90036A188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B888F9A31E6C67F90036A188 /* Main.storyboard */; };
 		B888F9A71E6C67F90036A188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B888F9A61E6C67F90036A188 /* Assets.xcassets */; };
@@ -78,6 +80,7 @@
 		437BB26789A83520E453A978 /* Pods-Score CenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Score CenterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Score CenterTests/Pods-Score CenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Score_CenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7016213C0EE6B504DADED1CB /* Pods-Score CenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Score CenterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Score CenterUITests/Pods-Score CenterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B80006421EBD6CA500A7ADCA /* PresetPointsTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointsTableHeader.swift; sourceTree = "<group>"; };
 		B80DA39A1EA0612F00770317 /* RealmManagable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManagable.swift; sourceTree = "<group>"; };
 		B830B9AA1EAEDBE90075F481 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B830B9AD1EAEE9700075F481 /* ActiveGroupSettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupSettingsVC.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		B85470BB1EAACE4B0016B714 /* ActiveGroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiveGroupVC.swift; sourceTree = "<group>"; };
 		B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupHeaderCell.swift; sourceTree = "<group>"; };
 		B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeaderCell.xib; sourceTree = "<group>"; };
+		B886D18E1EBE82C80046CA76 /* PresetPointCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointCollectionCell.swift; sourceTree = "<group>"; };
 		B888F99C1E6C67F90036A188 /* Score Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B888F99F1E6C67F90036A188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B888F9A41E6C67F90036A188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 				B8FC54001E71399D0078E1D5 /* Suclasses */,
 				B888F9E21E6E4B0C0036A188 /* nibs */,
 				B888F9DE1E6E497B0036A188 /* GroupTableViewCell.swift */,
+				B80006421EBD6CA500A7ADCA /* PresetPointsTableHeader.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				B8515CAC1EB1DB0A00D95A14 /* PresetPointCell.swift */,
 				B8515CAD1EB1DB0A00D95A14 /* PresetPointCell.xib */,
 				B8AA1D631EB3222700CC552F /* AddPresetScoreCell.swift */,
+				B886D18E1EBE82C80046CA76 /* PresetPointCollectionCell.swift */,
 			);
 			name = nibs;
 			sourceTree = "<group>";
@@ -672,8 +678,10 @@
 				B888F9DD1E6E48060036A188 /* GroupsViewController.swift in Sources */,
 				B8F216821EA9DBE900666917 /* Protocols.swift in Sources */,
 				B888F9D31E6E44290036A188 /* Group.swift in Sources */,
+				B886D18F1EBE82C80046CA76 /* PresetPointCollectionCell.swift in Sources */,
 				B831C3BB1E6E58FC0097A76B /* ShadowService.swift in Sources */,
 				B8F216881EA9ED0900666917 /* TeamCell.swift in Sources */,
+				B80006431EBD6CA500A7ADCA /* PresetPointsTableHeader.swift in Sources */,
 				B888F9DB1E6E46B30036A188 /* Team.swift in Sources */,
 				B8515CA91EB1D5FF00D95A14 /* PresetPoint.swift in Sources */,
 				B8515CAB1EB1D89300D95A14 /* PresetPointsVC.swift in Sources */,

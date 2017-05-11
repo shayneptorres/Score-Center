@@ -109,8 +109,12 @@ class GroupDetailTableViewManager : NSObject, UITableViewDelegate, UITableViewDa
             break
         case 1:
             selectedTeam = group?.teams.sorted(by: {$0.score > $1.score})[indexPath.row]
-            
-            viewController?.performSegue(withIdentifier: "showScoreEditor", sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "try") as! ScoreManagerVC
+            vc.team = selectedTeam
+            vc.group = group
+            vc.delegate = viewController as! ScoreManagerDelegate
+            viewController?.tabBarController?.present(vc, animated: true, completion: nil)
         default: break
         }
     }

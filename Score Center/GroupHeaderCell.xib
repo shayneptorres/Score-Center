@@ -22,13 +22,7 @@
                         <rect key="frame" x="0.0" y="8" width="320" height="128"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desription:" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-pb-Hvq">
-                                <rect key="frame" x="20" y="68.5" width="280" height="19.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Points:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afY-Um-sKJ">
-                                <rect key="frame" x="20" y="41" width="280" height="19.5"/>
+                                <rect key="frame" x="20" y="53" width="280" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,14 +49,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="lRc-w8-kWl" secondAttribute="trailing" constant="20" id="4cX-bN-h5R"/>
                             <constraint firstItem="lRc-w8-kWl" firstAttribute="top" secondItem="g3n-sB-Ctm" secondAttribute="top" constant="5" id="5TY-2Q-2rx"/>
-                            <constraint firstItem="LJ6-pb-Hvq" firstAttribute="top" secondItem="afY-Um-sKJ" secondAttribute="bottom" constant="8" id="5rg-Xh-8lb"/>
-                            <constraint firstItem="afY-Um-sKJ" firstAttribute="top" secondItem="TED-YB-E7t" secondAttribute="bottom" constant="8" id="61j-6a-X8v"/>
                             <constraint firstAttribute="trailing" secondItem="LJ6-pb-Hvq" secondAttribute="trailing" constant="20" id="6hg-9C-JE1"/>
                             <constraint firstItem="TED-YB-E7t" firstAttribute="leading" secondItem="g3n-sB-Ctm" secondAttribute="leading" constant="20" id="EdN-Gx-Wxu"/>
-                            <constraint firstAttribute="trailing" secondItem="afY-Um-sKJ" secondAttribute="trailing" constant="20" id="Oc0-qc-5zW"/>
-                            <constraint firstItem="afY-Um-sKJ" firstAttribute="leading" secondItem="g3n-sB-Ctm" secondAttribute="leading" constant="20" id="XMO-JM-Ge3"/>
                             <constraint firstItem="TED-YB-E7t" firstAttribute="top" secondItem="g3n-sB-Ctm" secondAttribute="top" constant="8" id="eOa-LT-50Q"/>
                             <constraint firstItem="LJ6-pb-Hvq" firstAttribute="leading" secondItem="g3n-sB-Ctm" secondAttribute="leading" constant="20" id="gCa-ZR-Aoq"/>
+                            <constraint firstItem="LJ6-pb-Hvq" firstAttribute="top" secondItem="TED-YB-E7t" secondAttribute="bottom" constant="20" id="iNw-hJ-TBa"/>
                             <constraint firstAttribute="trailing" secondItem="TED-YB-E7t" secondAttribute="trailing" constant="20" id="zDb-9o-ISc"/>
                         </constraints>
                     </view>
@@ -79,7 +70,6 @@
                 <outlet property="containerView" destination="g3n-sB-Ctm" id="LK2-XR-DNO"/>
                 <outlet property="descriptionLabel" destination="LJ6-pb-Hvq" id="G7b-nI-u5l"/>
                 <outlet property="groupNameLabel" destination="TED-YB-E7t" id="66t-e5-h9a"/>
-                <outlet property="totalPointsLabel" destination="afY-Um-sKJ" id="teN-iV-ZHs"/>
             </connections>
             <point key="canvasLocation" x="25" y="25.5"/>
         </tableViewCell>

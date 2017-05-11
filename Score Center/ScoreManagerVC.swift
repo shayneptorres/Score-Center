@@ -20,6 +20,13 @@ class ScoreManagerVC: UIViewController {
     
     var team : Team?
     var delegate : ScoreManagerDelegate?
+    var group : Group?
+    
+    @IBOutlet weak var collectionViewContainer: UIView!
+    
+    @IBOutlet weak var containerHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var formHeight: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +43,14 @@ class ScoreManagerVC: UIViewController {
         delegate?.showTabBar()
     }
     
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+        }
+    }
+    
+    
     /// Updates the UI elements of the view controller
     func updateUI(){
         guard let team = team else {return}
@@ -44,6 +59,14 @@ class ScoreManagerVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapDismiss))
         tap.delegate = self
         self.view.addGestureRecognizer(tap)
+        
+        if group?.presetPoints.count == 0 {
+            collectionViewContainer.isHidden = true
+            formHeight.constant = 180
+        } else {
+            
+            formHeight.constant = 240
+        }
     }
     
     func tapDismiss(){
@@ -52,11 +75,14 @@ class ScoreManagerVC: UIViewController {
     
     
     @IBAction func addPoints(_ sender: UIButton) {
-        guard var team = team, let update = Double(pointsTextField.text!), let delegate = delegate else {return}
+        guard var team = team,
+            let update = Double(pointsTextField.text!),
+            let delegate = delegate else {return}
         team.update {
             team.score += update
         }
         delegate.reloadData()
+        pointsTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -66,11 +92,42 @@ class ScoreManagerVC: UIViewController {
             team.score -= update
         }
         delegate.reloadData()
+        pointsTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func cancel(_ sender: UIButton) {
+        pointsTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func unwind(sender: UIStoryboardSegue){
+    }
+}
+
+extension ScoreManagerVC : UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (group?.presetPoints.count)!
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let group = group else {
+            return UICollectionViewCell()
+        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PresetPointCollection", for: indexPath) as! PresetPointCollectionCell
+        cell.points.text = "\(String(describing: group.presetPoints[indexPath.row].points))"
+        cell.body.layer.cornerRadius = 2
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        pointsTextField.text = String(describing: group!.presetPoints[indexPath.row].points)
+        
     }
 }
 
@@ -79,6 +136,7 @@ extension ScoreManagerVC : UIGestureRecognizerDelegate {
         if (touch.view?.isDescendant(of: self.formContainer))! {
             return false
         }
+        pointsTextField.resignFirstResponder()
         return true
     }
 }

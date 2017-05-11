@@ -11,7 +11,7 @@ import UIKit
 class PresetPointCell: UITableViewCell {
     
     @IBOutlet weak var pointLabel: UILabel!
-    class var cellHeight : CGFloat {get{return 64}}
-    
+    class var cellHeight : CGFloat {get{return 45}}    
+    @IBOutlet weak var body: UIView!
     
 }

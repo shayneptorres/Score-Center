@@ -21,6 +21,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6V-pt-Vwc">
                         <rect key="frame" x="5" y="5" width="366" height="39.5"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1place" translatesAutoresizingMaskIntoConstraints="NO" id="FJ2-bR-6WC">
+                                <rect key="frame" x="-3" y="4" width="68" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="p7o-CK-mlW"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xS-YQ-Gqd">
                                 <rect key="frame" x="8" y="10" width="29.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="14"/>
@@ -28,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrc-Cr-lRX">
-                                <rect key="frame" x="57.5" y="10" width="72.5" height="20"/>
+                                <rect key="frame" x="77.5" y="10" width="72.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,10 +50,12 @@
                         <constraints>
                             <constraint firstItem="VKw-rf-9NB" firstAttribute="centerY" secondItem="nrc-Cr-lRX" secondAttribute="centerY" id="110-ta-RzO"/>
                             <constraint firstAttribute="trailing" secondItem="VKw-rf-9NB" secondAttribute="trailing" constant="8" id="Pbd-M8-Zio"/>
+                            <constraint firstItem="FJ2-bR-6WC" firstAttribute="top" secondItem="f6V-pt-Vwc" secondAttribute="top" constant="4" id="Qrc-E0-yFE"/>
                             <constraint firstItem="3xS-YQ-Gqd" firstAttribute="centerY" secondItem="f6V-pt-Vwc" secondAttribute="centerY" id="Zkz-5f-l7M"/>
                             <constraint firstItem="3xS-YQ-Gqd" firstAttribute="leading" secondItem="f6V-pt-Vwc" secondAttribute="leading" constant="8" id="bWT-QK-8zA"/>
+                            <constraint firstItem="FJ2-bR-6WC" firstAttribute="leading" secondItem="f6V-pt-Vwc" secondAttribute="leading" constant="-3" id="ivO-us-bgo"/>
                             <constraint firstItem="nrc-Cr-lRX" firstAttribute="centerY" secondItem="3xS-YQ-Gqd" secondAttribute="centerY" id="mNr-Uw-2J8"/>
-                            <constraint firstItem="nrc-Cr-lRX" firstAttribute="leading" secondItem="3xS-YQ-Gqd" secondAttribute="trailing" constant="20" id="y1V-75-Q9p"/>
+                            <constraint firstItem="nrc-Cr-lRX" firstAttribute="leading" secondItem="3xS-YQ-Gqd" secondAttribute="trailing" constant="40" id="y1V-75-Q9p"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -61,6 +69,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="f6V-pt-Vwc" id="S89-Gm-xyp"/>
+                <outlet property="pointBannerImage" destination="FJ2-bR-6WC" id="tOG-OJ-0Fv"/>
                 <outlet property="pointsLabel" destination="VKw-rf-9NB" id="eVc-rJ-P6h"/>
                 <outlet property="rankLabel" destination="3xS-YQ-Gqd" id="z37-4H-JFQ"/>
                 <outlet property="teamNameLabel" destination="nrc-Cr-lRX" id="TPs-kQ-3K9"/>
@@ -68,4 +77,7 @@
             <point key="canvasLocation" x="87" y="59"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="1place" width="68" height="43"/>
+    </resources>
 </document>

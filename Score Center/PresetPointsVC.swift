@@ -16,8 +16,6 @@ class PresetPointsVC: UIViewController {
             tableView.register(nib, forCellReuseIdentifier: CellIdentifier.presetPointCell.rawValue)
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.estimatedRowHeight = 75
-            tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
     var group : Group?
@@ -26,6 +24,20 @@ class PresetPointsVC: UIViewController {
         super.viewDidLoad()
         tableView.reloadData()
     }
+    
+    @IBAction func addPoints(_ sender: UIButton) {
+        guard let score = Double(scoreTextField.text!) else {
+            return
+        }
+        add(score: score)
+    }
+    
+    @IBOutlet weak var scoreTextField: AppTextField! {
+        didSet {
+            scoreTextField.delegate = self
+        }
+    }
+    
 }
 
 extension PresetPointsVC : UITableViewDelegate, UITableViewDataSource {
@@ -40,14 +52,24 @@ extension PresetPointsVC : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addPresetScoreCell") as! AddPresetScoreCell
-            cell.delegate = self
-            return cell
-        }
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.presetPointCell.rawValue) as! PresetPointCell
-        cell.pointLabel.text = "\(String(describing: group?.presetPoints[indexPath.row].points.toDecimalFormat()))pts"
+        cell.pointLabel.text = "\(String(describing: group!.presetPoints[indexPath.row].points.toDecimalFormat()))pts"
+        cell.body.applyShadow()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return PresetPointCell.cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        switch  editingStyle {
+        case .delete:
+            group?.presetPoints[indexPath.row].delete()
+            tableView.reloadData()
+        default:
+            break
+        }
     }
 }
 
@@ -62,6 +84,14 @@ extension PresetPointsVC : PresetScoreCellDelegate {
         group.update {
             group.presetPoints.append(point)
         }
+        scoreTextField.text = ""
         tableView.reloadData()
+    }
+}
+
+extension PresetPointsVC : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
