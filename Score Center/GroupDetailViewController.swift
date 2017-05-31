@@ -18,12 +18,34 @@ class GroupDetailViewController: UIViewController {
         }
     }
     
+    var onboarded : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: UserDefaultsKey.firstTimeGroupDetail.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.firstTimeGroupDetail.rawValue)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         self.tabBarController?.tabBar.isHidden = true
         tableViewDelegate.group = self.group
         tableViewDelegate.viewController = self
+        
+        if !onboarded {
+            let onboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            guard let messageVC = onboard.instantiateViewController(withIdentifier: "onboardMessage") as? OnboardingMessageVC else {
+                return
+            }
+            messageVC.modalPresentationStyle = .overFullScreen
+            messageVC.set(headerMessage: "Group Detail",
+                          message: "Here is where you can manage specific groups. You can add teams to the group by tapping the button below. \n\n To add or subtract points from a team just tap it. \n\n If you want to make this group your 'Active Group' tap the edit button.",
+                          buttonTitle: "Sweet!")
+            messageVC.onboardingKey = UserDefaultsKey.firstTimeGroupDetail.rawValue
+            navigationController?.present(messageVC, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

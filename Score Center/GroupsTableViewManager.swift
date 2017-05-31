@@ -38,8 +38,9 @@ class GroupsTableViewManager : NSObject, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let groups = Group.getAll() as? [Group],
-            let storyboard = UIStoryboard(name: "Main", bundle: nil) as? UIStoryboard else {return}
+        guard let groups = Group.getAll() as? [Group] else {
+                return
+        }
         Group.setActiveGroup(withId: groups[indexPath.row].id)
         viewController?.navigationController?.popToRootViewController(animated: true)
     }

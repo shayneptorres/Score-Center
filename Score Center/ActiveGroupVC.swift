@@ -18,6 +18,15 @@ class ActiveGroupVC: UIViewController {
         }
     }
     
+    var onboarded : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: UserDefaultsKey.firstTimeActiveGroup.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.firstTimeActiveGroup.rawValue)
+        }
+    }
+    
     var tableViewDelegate = GroupDetailTableViewManager()
     
     @IBOutlet weak var messageLabel: UILabel!
@@ -42,6 +51,19 @@ class ActiveGroupVC: UIViewController {
         activeGroupMessageLabel.isHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor.appBlue()
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        if !onboarded {
+            let onboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            guard let messageVC = onboard.instantiateViewController(withIdentifier: "onboardMessage") as? OnboardingMessageVC else {
+                return
+            }
+            messageVC.modalPresentationStyle = .overFullScreen
+            messageVC.set(headerMessage: "Welcome to Score Center",
+                          message: "Score Center is the place you can manage of all your score tracking needs. To get started head over to the 'Groups' tab and add a group.\n\nAfter that make sure you return here to set your 'Active Group'.\n\nSetting an Active Group allows you to quickly manage team scores",
+                          buttonTitle: "Got it!")
+            messageVC.onboardingKey = UserDefaultsKey.firstTimeActiveGroup.rawValue
+            navigationController?.present(messageVC, animated: true, completion: nil)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

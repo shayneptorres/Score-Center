@@ -18,6 +18,9 @@ enum CellIdentifier : String {
 
 enum UserDefaultsKey : String {
     case activeGroup = "activeGroupID"
+    case firstTimeActiveGroup = "firstTimeActiveGroup"
+    case firstTimeGroupDetail = "firstTimeGroupDetail"
+    case firstTimePresetPoints = "firstTimePresetPoints"
 }
 
 enum Update : String {

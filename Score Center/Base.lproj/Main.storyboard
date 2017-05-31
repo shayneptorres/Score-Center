@@ -53,9 +53,9 @@
                             <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your active group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idi-N7-hee">
-                                    <rect key="frame" x="9" y="5" width="133" height="24"/>
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idi-N7-hee">
+                                    <rect key="frame" x="26" y="6" width="98.5" height="22"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="16"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -128,8 +128,31 @@
                             <constraint firstItem="YTi-VQ-PP2" firstAttribute="top" secondItem="O8u-LM-L3n" secondAttribute="bottom" constant="20" id="yt0-Y4-mPR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WRK-CK-aKE"/>
+                    <navigationItem key="navigationItem" id="WRK-CK-aKE">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title="All groups" id="zLM-eO-o3x">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="o1o-mb-3g1">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="vdE-hs-TLV">
+                                    <rect key="frame" x="36" y="6" width="78" height="22"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="16"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="vdE-hs-TLV" firstAttribute="centerX" secondItem="o1o-mb-3g1" secondAttribute="centerX" id="KzX-4y-l2j"/>
+                                <constraint firstItem="vdE-hs-TLV" firstAttribute="centerY" secondItem="o1o-mb-3g1" secondAttribute="centerY" id="vLF-yb-E5M"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="zLM-eO-o3x" id="yBp-7G-wf5"/>
                         <outlet property="bottomButton" destination="YTi-VQ-PP2" id="mQU-UY-3oo"/>
                         <outlet property="tableView" destination="O8u-LM-L3n" id="uK6-dN-0Uj"/>
                         <segue destination="G1f-fs-4GW" kind="presentation" identifier="showAddGroup" id="PYQ-UF-e9N"/>
@@ -297,7 +320,13 @@
         <scene sceneID="ujD-2e-Stg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qS0-ZO-3f5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Active Group" id="EF0-Id-kyC"/>
+                    <tabBarItem key="tabBarItem" title="Active Group" image="activeGroup" id="EF0-Id-kyC">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tint">
+                                <color key="value" red="0.24655181169509888" green="0.68816351890563965" blue="0.99983185529708862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x1-n0-gri">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -316,7 +345,13 @@
         <scene sceneID="eLb-ZG-ZfM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Sr-sH-SWf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="Bmf-0H-xmU"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="groups" id="Bmf-0H-xmU">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tint">
+                                <color key="value" red="0.0" green="0.46036338806152344" blue="0.95929926633834839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6YX-ti-3f3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -601,7 +636,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" red="0.24888617165167892" green="0.69000279668730824" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="0.24705882352941178" green="0.69019607843137254" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstItem="WAp-mh-nUY" firstAttribute="leading" secondItem="ZZ5-p3-BbK" secondAttribute="leading" constant="4" id="VS0-vO-3wJ"/>
                                                                         <constraint firstItem="WAp-mh-nUY" firstAttribute="centerY" secondItem="ZZ5-p3-BbK" secondAttribute="centerY" id="aRe-78-C1p"/>
@@ -697,11 +732,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="activeGroup" width="28" height="28"/>
         <image name="cancelXButton" width="226" height="226"/>
         <image name="dotsButton" width="7" height="26"/>
+        <image name="groups" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Etz-uh-kTY"/>
-        <segue reference="o9o-fc-jUq"/>
+        <segue reference="uhn-Oq-O8r"/>
+        <segue reference="PYQ-UF-e9N"/>
     </inferredMetricsTieBreakers>
 </document>

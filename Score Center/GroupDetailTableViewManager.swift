@@ -113,7 +113,7 @@ class GroupDetailTableViewManager : NSObject, UITableViewDelegate, UITableViewDa
             let vc = storyboard.instantiateViewController(withIdentifier: "try") as! ScoreManagerVC
             vc.team = selectedTeam
             vc.group = group
-            vc.delegate = viewController as! ScoreManagerDelegate
+            vc.delegate = (viewController as! ScoreManagerDelegate)
             viewController?.tabBarController?.present(vc, animated: true, completion: nil)
         default: break
         }

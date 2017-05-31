@@ -19,10 +19,32 @@ class PresetPointsVC: UIViewController {
         }
     }
     var group : Group?
+    
+    var onboarded : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: UserDefaultsKey.firstTimePresetPoints.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: UserDefaultsKey.firstTimePresetPoints.rawValue)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        
+        if !onboarded {
+            let onboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            guard let messageVC = onboard.instantiateViewController(withIdentifier: "onboardMessage") as? OnboardingMessageVC else {
+                return
+            }
+            messageVC.modalPresentationStyle = .overFullScreen
+            messageVC.set(headerMessage: "Preset Points",
+                          message: "Here is where you can add preset points. Preset points come in handy when you need to add or remove a specific score value multiple times. When you add values here, they will show up whenever you are editing the score of the current active team.\n\nWhile editing scores, tap on the preset point to autofill the textfield",
+                          buttonTitle: "Awesome!")
+            messageVC.onboardingKey = UserDefaultsKey.firstTimePresetPoints.rawValue
+            navigationController?.present(messageVC, animated: true, completion: nil)
+        }
     }
     
     @IBAction func addPoints(_ sender: UIButton) {

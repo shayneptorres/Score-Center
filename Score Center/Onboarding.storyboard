@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding MessageVC-->
+        <scene sceneID="5dO-bW-j37">
+            <objects>
+                <viewController storyboardIdentifier="onboardMessage" id="0Rf-nT-yUh" customClass="OnboardingMessageVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="43a-PU-oyL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ana-6K-uOU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dwL-RN-MwI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-F4-11r">
+                                <rect key="frame" x="19" y="66.5" width="337.5" height="534"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueGradient" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-sh-h4a">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="534"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Score Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="oNj-wA-LhI">
+                                        <rect key="frame" x="20" y="20" width="297" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Score Center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="kqX-cR-ozt">
+                                        <rect key="frame" x="20" y="73" width="297" height="22"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSV-tn-fYR">
+                                        <rect key="frame" x="16.5" y="440" width="304" height="45"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="WtJ-8I-4oW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismiss:" destination="0Rf-nT-yUh" eventType="touchUpInside" id="QDq-5X-gw5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CM-SK-mx5">
+                                        <rect key="frame" x="101.5" y="495" width="135" height="29"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <state key="normal" title="Skip tutorials">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="skipTutorials:" destination="0Rf-nT-yUh" eventType="touchUpInside" id="tBM-lu-Dli"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0CM-SK-mx5" firstAttribute="centerX" secondItem="X6d-F4-11r" secondAttribute="centerX" id="1nG-N7-aLD"/>
+                                    <constraint firstItem="kqX-cR-ozt" firstAttribute="top" secondItem="oNj-wA-LhI" secondAttribute="bottom" constant="20" id="57G-GK-3e1"/>
+                                    <constraint firstItem="zSV-tn-fYR" firstAttribute="width" secondItem="t6M-sh-h4a" secondAttribute="width" multiplier="9:10" id="CgU-T0-3NB"/>
+                                    <constraint firstAttribute="trailing" secondItem="t6M-sh-h4a" secondAttribute="trailing" id="Ddc-e7-YV0"/>
+                                    <constraint firstItem="zSV-tn-fYR" firstAttribute="centerX" secondItem="X6d-F4-11r" secondAttribute="centerX" id="OUf-pe-WZT"/>
+                                    <constraint firstItem="oNj-wA-LhI" firstAttribute="leading" secondItem="X6d-F4-11r" secondAttribute="leading" constant="20" id="R4L-Wb-aZK"/>
+                                    <constraint firstItem="t6M-sh-h4a" firstAttribute="leading" secondItem="X6d-F4-11r" secondAttribute="leading" id="RdO-0K-U29"/>
+                                    <constraint firstItem="oNj-wA-LhI" firstAttribute="top" secondItem="X6d-F4-11r" secondAttribute="top" constant="20" id="ZpM-VA-tVs"/>
+                                    <constraint firstAttribute="trailing" secondItem="kqX-cR-ozt" secondAttribute="trailing" constant="20.5" id="boG-02-UHY"/>
+                                    <constraint firstItem="0CM-SK-mx5" firstAttribute="top" secondItem="zSV-tn-fYR" secondAttribute="bottom" constant="10" id="dKA-WR-560"/>
+                                    <constraint firstAttribute="bottom" secondItem="t6M-sh-h4a" secondAttribute="bottom" id="dtb-FR-0HI"/>
+                                    <constraint firstItem="0CM-SK-mx5" firstAttribute="width" secondItem="t6M-sh-h4a" secondAttribute="width" multiplier="2:5" id="dxj-2q-C6D"/>
+                                    <constraint firstItem="t6M-sh-h4a" firstAttribute="top" secondItem="X6d-F4-11r" secondAttribute="top" id="kVZ-aU-XTV"/>
+                                    <constraint firstAttribute="bottom" secondItem="0CM-SK-mx5" secondAttribute="bottom" constant="10" id="wkO-dx-J9T"/>
+                                    <constraint firstAttribute="trailing" secondItem="oNj-wA-LhI" secondAttribute="trailing" constant="20" id="wlx-fY-w4C"/>
+                                    <constraint firstItem="kqX-cR-ozt" firstAttribute="leading" secondItem="X6d-F4-11r" secondAttribute="leading" constant="20" id="yy2-K6-gVI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X6d-F4-11r" firstAttribute="height" secondItem="dwL-RN-MwI" secondAttribute="height" multiplier="8:10" id="98H-wF-iIb"/>
+                            <constraint firstItem="X6d-F4-11r" firstAttribute="centerY" secondItem="dwL-RN-MwI" secondAttribute="centerY" id="bhr-6h-SzW"/>
+                            <constraint firstItem="X6d-F4-11r" firstAttribute="width" secondItem="dwL-RN-MwI" secondAttribute="width" multiplier="9:10" id="lSR-yc-2eI"/>
+                            <constraint firstItem="X6d-F4-11r" firstAttribute="centerX" secondItem="dwL-RN-MwI" secondAttribute="centerX" id="vX4-g4-OsK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="zSV-tn-fYR" id="li2-iF-R2U"/>
+                        <outlet property="headerMessage" destination="oNj-wA-LhI" id="mgg-ei-Q0m"/>
+                        <outlet property="message" destination="kqX-cR-ozt" id="h5M-3l-hwY"/>
+                        <outlet property="skipButton" destination="0CM-SK-mx5" id="aMQ-tb-qh9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLp-V8-sRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-487.19999999999999" y="-183.05847076461771"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blueGradient" width="313" height="495"/>
+    </resources>
+</document>

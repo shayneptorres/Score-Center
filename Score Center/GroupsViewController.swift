@@ -19,6 +19,10 @@ class GroupsViewController: UIViewController {
         }
     }
     @IBOutlet weak var bottomButton: UIButton!
+    @IBOutlet weak var backButton: UIBarButtonItem! {
+        didSet {
+        }
+    }
     
     var groups = [Group]() {
         didSet {
@@ -92,6 +96,13 @@ extension GroupsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if groups[indexPath.row].id == UserDefaults.standard.integer(forKey: UserDefaultsKey.activeGroup.rawValue) {
+            return false
+        }
+        return true
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
