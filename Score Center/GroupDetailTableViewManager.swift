@@ -132,7 +132,7 @@ class GroupDetailTableViewManager : NSObject, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            group?.teams[indexPath.row].delete()
+            group?.teams.sorted(by: {$0.score > $1.score})[indexPath.row].delete()
             UserDefaults.standard.setValue(true, forKey: Update.groupsUpdated.rawValue)
             self.tableView.reloadData()
         }
