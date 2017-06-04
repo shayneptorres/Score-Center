@@ -80,6 +80,14 @@ class ScoreManagerVC: UIViewController {
             self.present(presetPointAlert, animated: true, completion: {})
         } else {
             if let score = Double(pointsTextField.text!) {
+                var tempArr = group.presetPoints.filter({ $0.points == score })
+                if !tempArr.isEmpty {
+                    // Throw up a warning, telling the use they cant add multiple scores
+                    let presetPointAlert = UIAlertController(title: "Oops, that preset score already exists.", message: "You cannot have duplicate preset point values", preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "Sweet!", style: .default, handler: nil)
+                    presetPointAlert.addAction(okayAction)
+                    return
+                }
                 var points = PresetPoint()
                 points.points = score
                 points.autoincrementID()
@@ -120,6 +128,17 @@ class ScoreManagerVC: UIViewController {
         pointsTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func clearScore(_ sender: UIButton) {
+        guard var team = team else { return }
+        team.update {
+            team.score = 0
+        }
+        delegate?.reloadData()
+        pointsTextField.resignFirstResponder()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
     @IBAction func cancel(_ sender: UIButton) {
         pointsTextField.resignFirstResponder()
