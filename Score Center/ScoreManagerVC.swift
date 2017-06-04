@@ -15,8 +15,18 @@ class ScoreManagerVC: UIViewController {
     
     @IBOutlet weak var formContainer: UIView!
     
-    @IBOutlet weak var addPointButton: UIButton!
-    @IBOutlet weak var removePointsButton: UIButton!
+    @IBOutlet weak var addPointButton: UIButton! {
+        didSet {
+            addPointButton.layer.cornerRadius = 2
+            addPointButton.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var removePointsButton: UIButton! {
+        didSet {
+            removePointsButton.layer.cornerRadius = 2
+            removePointsButton.layer.masksToBounds = true
+        }
+    }
     
     var team : Team?
     var delegate : ScoreManagerDelegate?
