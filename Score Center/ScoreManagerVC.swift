@@ -24,7 +24,6 @@ class ScoreManagerVC: UIViewController {
     
     @IBOutlet weak var collectionViewContainer: UIView!
     
-    @IBOutlet weak var containerHeight: NSLayoutConstraint!
     
     @IBOutlet weak var formHeight: NSLayoutConstraint!
 
@@ -60,19 +59,45 @@ class ScoreManagerVC: UIViewController {
         tap.delegate = self
         self.view.addGestureRecognizer(tap)
         
-        if group?.presetPoints.count == 0 {
-            collectionViewContainer.isHidden = true
-            formHeight.constant = 180
-        } else {
-            
-            formHeight.constant = 240
-        }
+        // Form container
+        formContainer.layer.cornerRadius = 5
+        formContainer.layer.masksToBounds = true
+        formContainer.applyShadow()
+        
     }
     
     func tapDismiss(){
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func addPresetPoints(_ sender: UIButton) {
+        guard var group = group else { return }
+        
+        if pointsTextField.text == "" {
+            let presetPointAlert = UIAlertController(title: "Add preset point", message: "In order to add a preset point, please make sure you have entered a number value", preferredStyle: .alert)
+            let okayAction = UIAlertAction(title: "Got it", style: .default, handler: nil)
+            presetPointAlert.addAction(okayAction)
+            self.present(presetPointAlert, animated: true, completion: {})
+        } else {
+            if let score = Double(pointsTextField.text!) {
+                var points = PresetPoint()
+                points.points = score
+                points.autoincrementID()
+                group.update {
+                    group.presetPoints.append(points)
+                }
+                collectionView.reloadData()
+            }
+        }
+        
+    }
+    
+    @IBAction func getPresetPointsInfo(_ sender: UIButton) {
+        let presetPointAlert = UIAlertController(title: "What are preset points", message: "Preset points, are specific point values that you can save ahead of time. Let's say you are need to add a certain score amount multiple times. Add it here and next time you go to add/remove points, you dont have to type the value again.", preferredStyle: .alert)
+        let okayAction = UIAlertAction(title: "Sweet!", style: .default, handler: nil)
+        presetPointAlert.addAction(okayAction)
+        self.present(presetPointAlert, animated: true, completion: {})
+    }
     
     @IBAction func addPoints(_ sender: UIButton) {
         guard var team = team,
@@ -102,6 +127,14 @@ class ScoreManagerVC: UIViewController {
     }
     
     @IBAction func unwind(sender: UIStoryboardSegue){
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let group = group else { return }
+        if segue.identifier == "addPresetPointsFromScoreManager" {
+            let presetScoreVC = segue.destination as! PresetPointsVC
+            
+        }
     }
 }
 

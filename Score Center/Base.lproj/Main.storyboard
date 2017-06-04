@@ -439,7 +439,7 @@
         <!--Preset PointsVC-->
         <scene sceneID="WFS-Rl-aWr">
             <objects>
-                <viewController id="nHf-Rr-Sf6" customClass="PresetPointsVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="presetScore" id="nHf-Rr-Sf6" customClass="PresetPointsVC" customModule="Score_Center" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s05-zM-eZ1"/>
                         <viewControllerLayoutGuide type="bottom" id="d6C-ny-31l"/>
@@ -557,7 +557,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-oj-KCy">
-                                <rect key="frame" x="19" y="80" width="337.5" height="240"/>
+                                <rect key="frame" x="19" y="80" width="337.5" height="260"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter points" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-8s-Xq0" customClass="AppTextField" customModule="Score_Center" customModuleProvider="target">
                                         <rect key="frame" x="20" y="60.5" width="297.5" height="45"/>
@@ -570,7 +570,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCW-tY-jdG">
-                                        <rect key="frame" x="20" y="192.5" width="134.5" height="32"/>
+                                        <rect key="frame" x="20" y="212.5" width="134.5" height="32"/>
                                         <color key="backgroundColor" red="0.2666666667" green="0.85882352939999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <state key="normal" title="Add points">
@@ -587,7 +587,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlr-7I-JG3">
-                                        <rect key="frame" x="182" y="192.5" width="135" height="32"/>
+                                        <rect key="frame" x="182" y="212.5" width="135" height="32"/>
                                         <color key="backgroundColor" red="1" green="0.5062004188" blue="0.54784620039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                         <state key="normal" title="Remove points">
@@ -598,7 +598,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cb-3k-wg9">
-                                        <rect key="frame" x="20" y="110" width="297.5" height="60"/>
+                                        <rect key="frame" x="20" y="125.5" width="297.5" height="60"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preset Points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggK-Qb-0ZX">
                                                 <rect key="frame" x="0.0" y="0.0" width="89.5" height="16"/>
@@ -658,15 +658,42 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rod-qm-KA2">
+                                                <rect key="frame" x="277.5" y="-2" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="dQc-ie-Kh5"/>
+                                                    <constraint firstAttribute="height" constant="20" id="j3N-8Q-g3n"/>
+                                                </constraints>
+                                                <state key="normal" image="plusButton"/>
+                                                <connections>
+                                                    <action selector="addPresetPoints:" destination="90q-2r-AWI" eventType="touchUpInside" id="8b6-Vk-mzT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LZ-N6-3qI">
+                                                <rect key="frame" x="93.5" y="-2" width="15" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="7DE-OP-t0j"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Cpm-1y-Cnm"/>
+                                                </constraints>
+                                                <state key="normal" title="?">
+                                                    <color key="titleColor" red="0.24655181169509888" green="0.68816351890563965" blue="0.99983185529708862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="getPresetPointsInfo:" destination="90q-2r-AWI" eventType="touchUpInside" id="X1z-hq-TcX"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="6LZ-N6-3qI" firstAttribute="centerY" secondItem="ggK-Qb-0ZX" secondAttribute="centerY" id="AIx-Ht-9Wb"/>
                                             <constraint firstItem="dza-J3-vYb" firstAttribute="top" secondItem="ggK-Qb-0ZX" secondAttribute="bottom" constant="5" id="N2B-S5-VKw"/>
                                             <constraint firstAttribute="trailing" secondItem="dza-J3-vYb" secondAttribute="trailing" id="OcV-um-SoR"/>
                                             <constraint firstItem="ggK-Qb-0ZX" firstAttribute="leading" secondItem="0cb-3k-wg9" secondAttribute="leading" id="Vzg-i8-N3O"/>
+                                            <constraint firstItem="6LZ-N6-3qI" firstAttribute="leading" secondItem="ggK-Qb-0ZX" secondAttribute="trailing" constant="4" id="elG-E7-Ccp"/>
                                             <constraint firstItem="ggK-Qb-0ZX" firstAttribute="top" secondItem="0cb-3k-wg9" secondAttribute="top" id="n4B-Md-qap"/>
                                             <constraint firstItem="dza-J3-vYb" firstAttribute="leading" secondItem="0cb-3k-wg9" secondAttribute="leading" id="oAP-nf-HSD"/>
                                             <constraint firstAttribute="height" constant="60" id="yhf-gx-cmE"/>
+                                            <constraint firstItem="rod-qm-KA2" firstAttribute="centerY" secondItem="ggK-Qb-0ZX" secondAttribute="centerY" id="yja-hZ-P2U"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -679,13 +706,14 @@
                                     <constraint firstItem="0cb-3k-wg9" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="Xe9-ly-KOn"/>
                                     <constraint firstAttribute="trailing" secondItem="fZI-m5-kPG" secondAttribute="trailing" constant="20" id="Y4A-0d-t40"/>
                                     <constraint firstItem="MkZ-8s-Xq0" firstAttribute="top" secondItem="fZI-m5-kPG" secondAttribute="bottom" constant="20" id="ZrQ-44-OGZ"/>
+                                    <constraint firstItem="rod-qm-KA2" firstAttribute="trailing" secondItem="MkZ-8s-Xq0" secondAttribute="trailing" id="cbo-qu-4Iy"/>
                                     <constraint firstItem="fZI-m5-kPG" firstAttribute="top" secondItem="3vH-oj-KCy" secondAttribute="top" constant="20" id="dG9-CK-FPC"/>
                                     <constraint firstItem="YCW-tY-jdG" firstAttribute="width" secondItem="0cb-3k-wg9" secondAttribute="width" multiplier="5:11" id="eRT-Lh-QIR"/>
                                     <constraint firstAttribute="trailing" secondItem="MkZ-8s-Xq0" secondAttribute="trailing" constant="20" id="fZO-5j-NSZ"/>
                                     <constraint firstItem="Rlr-7I-JG3" firstAttribute="width" secondItem="YCW-tY-jdG" secondAttribute="width" id="h5O-nc-0It"/>
                                     <constraint firstAttribute="bottom" secondItem="Rlr-7I-JG3" secondAttribute="bottom" constant="15.5" id="kXR-Em-t0W"/>
-                                    <constraint firstItem="0cb-3k-wg9" firstAttribute="top" secondItem="MkZ-8s-Xq0" secondAttribute="bottom" constant="4" id="qGf-2r-Saa"/>
-                                    <constraint firstAttribute="height" constant="240" id="sTY-jL-OhA"/>
+                                    <constraint firstItem="0cb-3k-wg9" firstAttribute="top" secondItem="MkZ-8s-Xq0" secondAttribute="bottom" constant="20" id="qGf-2r-Saa"/>
+                                    <constraint firstAttribute="height" constant="260" id="sTY-jL-OhA"/>
                                     <constraint firstItem="Rlr-7I-JG3" firstAttribute="trailing" secondItem="0cb-3k-wg9" secondAttribute="trailing" id="t4m-pr-3ao"/>
                                     <constraint firstAttribute="bottom" secondItem="YCW-tY-jdG" secondAttribute="bottom" constant="15.5" id="toK-5J-48a"/>
                                     <constraint firstItem="fZI-m5-kPG" firstAttribute="leading" secondItem="3vH-oj-KCy" secondAttribute="leading" constant="20" id="zoH-2g-bBD"/>
@@ -716,7 +744,6 @@
                         <outlet property="addPointButton" destination="YCW-tY-jdG" id="iro-Hx-G1R"/>
                         <outlet property="collectionView" destination="dza-J3-vYb" id="Y5B-Am-UDp"/>
                         <outlet property="collectionViewContainer" destination="0cb-3k-wg9" id="vWD-fW-EkA"/>
-                        <outlet property="containerHeight" destination="yhf-gx-cmE" id="E7y-EA-qIx"/>
                         <outlet property="formContainer" destination="3vH-oj-KCy" id="8fI-pJ-8lj"/>
                         <outlet property="formHeight" destination="sTY-jL-OhA" id="WDg-rR-MnV"/>
                         <outlet property="pointsTextField" destination="MkZ-8s-Xq0" id="EfC-X7-Goc"/>
@@ -736,6 +763,7 @@
         <image name="cancelXButton" width="226" height="226"/>
         <image name="dotsButton" width="7" height="26"/>
         <image name="groups" width="28" height="28"/>
+        <image name="plusButton" width="31" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uhn-Oq-O8r"/>
