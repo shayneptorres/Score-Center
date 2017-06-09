@@ -47,6 +47,20 @@ class ActiveGroupVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let team1 = Team()
+        let team2 = Team()
+        let team3 = Team()
+        let team4 = Team()
+        let team5 = Team()
+        let teams = [team1, team2, team3, team4, team5]
+        let b = Bracket()
+        b.create(teams: teams)
+        print(b.getTiers())
+        
+        
+        
         tableView.isHidden = true
         activeGroupMessageLabel.isHidden = false
         self.navigationController?.navigationBar.barTintColor = UIColor.appBlue()
