@@ -53,22 +53,24 @@ class Bracket : Object, RealmManagable {
         }
         
         // Populate the first tier with the necessary amount of teams
-        for i in 1...tier1MatchCount {
+        for _ in 1...tier1MatchCount {
             let match = BracketMatch(teamA: tempTeams.removeLast(), teamB: tempTeams.removeLast())
             tiers[0].matches.append(match)
         }
         
         // Fill the second tier with the necessary amount of half brackets
         // These will be matched up with the winners of the first tier
-        if tempTeams.count == 0 { return }
-        for i in 1...tier1MatchCount {
+        
+        for _ in 1...tier1MatchCount {
+            if tempTeams.count == 0 { return }
             let match = BracketMatch(teamA: tempTeams.removeLast())
             tiers[1].matches.append(match)
         }
         
         // Fill the second tier with the remaining amount of full matches
         if tempTeams.count == 0 { return }
-        for i in 1...(tempTeams.count/2) {
+        for _ in 1...(tempTeams.count/2) {
+            if tempTeams.count == 0 { return }
             let match = BracketMatch(teamA: tempTeams.removeLast(), teamB: tempTeams.removeLast())
             tiers[1].matches.append(match)
         }
