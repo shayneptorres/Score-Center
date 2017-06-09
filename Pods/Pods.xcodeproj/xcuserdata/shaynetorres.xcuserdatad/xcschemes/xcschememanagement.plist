@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Score CenterUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,22 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>383C231C9D5F1771E67FEC41BA14BD7F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A42367E5C9D46FBA70D3C42B518CE4BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A751FCA48D9A9842138DEC300712E09D</key>
+		<key>C85BC0B695AA1E627626D3DA515C26C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C85BC0B695AA1E627626D3DA515C26C9</key>
+		<key>D708F57FF9072F4182E46320565C288C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

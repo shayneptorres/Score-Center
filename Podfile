@@ -9,14 +9,12 @@ target 'Score Center' do
 pod 'Realm', git: 'https://github.com/realm/realm-cocoa.git',:submodules => true, branch: 'master'
 pod 'RealmSwift', git: 'https://github.com/realm/realm-cocoa.git',:submodules => true, branch: 'master'
 
+
   target 'Score CenterTests' do
     inherit! :search_paths
     # Pods for testing
-  end
-
-  target 'Score CenterUITests' do
-    inherit! :search_paths
-    # Pods for testing
+pod 'Realm', git: 'https://github.com/realm/realm-cocoa.git',:submodules => true, branch: 'master'
+pod 'RealmSwift', git: 'https://github.com/realm/realm-cocoa.git',:submodules => true, branch: 'master'
   end
 
 end

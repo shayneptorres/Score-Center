@@ -54,7 +54,8 @@ class ActiveGroupVC: UIViewController {
         let team3 = Team()
         let team4 = Team()
         let team5 = Team()
-        let teams = [team1, team2, team3, team4, team5]
+        let team6 = Team()
+        let teams = [team1, team2, team3, team4]
         let b = Bracket()
         b.create(teams: teams)
         print(b.getTiers())

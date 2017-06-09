@@ -37,100 +37,56 @@ class Bracket : Object, RealmManagable {
     
     func create(teams: [Team]){
         // First get the number of tiers needed for the team count
-        var teirCount = 1
-        var temp : Double = Double(teams.count)
         
+        var temp : Double = Double(teams.count)
+        var tempTeams = teams
+        
+        let tierCount = getTierCount(teamCount: Double(teams.count))
+        let tier1MatchCount = findTier1MatchCount(teamCount: teams.count)
+        
+        // Create the teir structure
+        // Adds the necessary amount of tiers to the bracket
+        for i in 1...tierCount {
+            let tier = BracketTier()
+            tier.level = i
+            tiers.append(tier)
+        }
+        
+        // Populate the first tier with the necessary amount of teams
+        for i in 1...tier1MatchCount {
+            let match = BracketMatch(teamA: tempTeams.removeLast(), teamB: tempTeams.removeLast())
+            tiers[0].matches.append(match)
+        }
+        
+        // Fill the second tier with the necessary amount of half brackets
+        // These will be matched up with the winners of the first tier
+        if tempTeams.count == 0 { return }
+        for i in 1...tier1MatchCount {
+            let match = BracketMatch(teamA: tempTeams.removeLast())
+            tiers[1].matches.append(match)
+        }
+        
+        // Fill the second tier with the remaining amount of full matches
+        if tempTeams.count == 0 { return }
+        for i in 1...(tempTeams.count/2) {
+            let match = BracketMatch(teamA: tempTeams.removeLast(), teamB: tempTeams.removeLast())
+            tiers[1].matches.append(match)
+        }
+        
+    }
+    
+    func getTierCount(teamCount: Double) -> Int {
         // First teir match count is half the number of teams playing
-        temp /= 2
+        var teirCount = 1
+        var tempTeamCount = teamCount/2
         teirCount += 1
-        while temp > 1 {
+        while tempTeamCount > 1 {
             // Each teir following should also have half the number of matches
             // as the tier before
-            temp /= 2
+            tempTeamCount /= 2
             teirCount += 1
         }
-        
-        var teamPosition = 0
-        
-        // If the number of teams needed in the first round is not zero
-        // we need to create matches to even out the bracket
-        if findTier1MatchCount(teamCount: teams.count) != 0 {
-            teirCount += 1
-            
-            // Create the tier structures
-            for _ in 0..<teirCount {
-                let tier = BracketTier()
-                addTier(tier: tier)
-            }
-            
-            // Places the number of matches needed in the first round, in the 
-            // first tier object
-            for _ in 1...findTier1MatchCount(teamCount: teams.count) {
-                let match = BracketMatch(teamA: teams[teamPosition], teamB: teams[teamPosition + 1])
-                tiers[0].matches.append(match)
-                teamPosition += 2
-            }
-            
-            
-            // Here we fill all of the teirs with matches
-            for (i, tier) in tiers.enumerated() {
-                // Create the second level teir with all the remaining matches
-                if i == 1 {
-                    
-                    // Fill all the half matches the are depending on the 
-                    // first teir matches to finish
-                    for _ in 1...findTier1MatchCount(teamCount: teams.count) {
-                        let match = BracketMatch(teamA: teams[teamPosition])
-                        tier.matches.append(match)
-                        teamPosition += 1
-                    }
-                    
-                    // Fill in all the remaining match pairs
-                    var remainingTeamCount = teams.count - teamPosition
-                    
-                    for _ in 1...remainingTeamCount/2 {
-                        // Create a match with two teams and append the match
-                        // to the tier
-                        var match = BracketMatch(teamA: teams[teamPosition], teamB: teams[teamPosition + 1])
-                        // move the current team position by two
-                        teamPosition += 2
-                        tier.matches.append(match)
-                    }
-                } else {
-                    // Fill in the rest of the tiers with empty matches
-                    
-                }
-            }
-            
-            
-        } else {
-            // Create the tier structures
-            for i in 0..<teirCount {
-                let tier = BracketTier()
-                addTier(tier: tier)
-            }
-            
-            // Add matches to teirs
-            
-            for (i, tier) in tiers.enumerated() {
-                // Create the first level tier with all the team matches
-                if i == 0 {
-                    for j in 0..<teams.count/2 {
-                        var match = BracketMatch()
-                        if teamPosition + 1 == teams.count - 1 {
-                            match = BracketMatch(teamA: teams[teamPosition])
-                        } else {
-                            match = BracketMatch(teamA: teams[teamPosition], teamB: teams[teamPosition + 1])
-                            teamPosition += 2
-                        }
-                        tier.matches.append(match)
-                    }
-                } else {
-                    // Fill in the rest of the tiers with empty matches
-                    
-                }
-            }
-        }
+        return teirCount
     }
     
     /// Finds the closetst power of two value to the number passed in.
@@ -155,7 +111,12 @@ class Bracket : Object, RealmManagable {
     /// - Parameter teamCount: The number of teams participating
     /// - Returns: the number of matches needed in the first round
     func findTier1MatchCount(teamCount: Int) -> Int {
-        return teamCount % findClosestPowerOf2(val: teamCount)
+        if teamCount % findClosestPowerOf2(val: teamCount) != 0 {
+            return teamCount % findClosestPowerOf2(val: teamCount)
+        } else {
+            return teamCount/2
+        }
+        
     }
     
     

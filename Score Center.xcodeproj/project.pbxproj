@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4DAF1252E954D528E26B02C5 /* Pods_Score_CenterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */; };
-		90813E85B2C7E67A6C90E9E3 /* Pods_Score_CenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4FB1F44027D14AE223A14A /* Pods_Score_CenterTests.framework */; };
+		6CB2B3852675DBE9C601EC39 /* Pods_Score_CenterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4FB1F44027D14AE223A14A /* Pods_Score_CenterTests.framework */; };
 		B80006431EBD6CA500A7ADCA /* PresetPointsTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80006421EBD6CA500A7ADCA /* PresetPointsTableHeader.swift */; };
 		B80DA39B1EA0612F00770317 /* RealmManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80DA39A1EA0612F00770317 /* RealmManagable.swift */; };
 		B830B9AB1EAEDBE90075F481 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830B9AA1EAEDBE90075F481 /* Colors.swift */; };
@@ -29,13 +28,14 @@
 		B857DDDE1EA263A8003A00BF /* GroupHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */; };
 		B857DDDF1EA263A8003A00BF /* GroupHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */; };
 		B86571B71EE67282000ED4FC /* BracketMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86571B61EE67282000ED4FC /* BracketMatch.swift */; };
+		B86D8EEC1EEA5F5400A4AAB2 /* Score_CenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D8EEB1EEA5F5400A4AAB2 /* Score_CenterTests.swift */; };
+		B86D8EF31EEA5FDD00A4AAB2 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4CD5C1EE4D13E00AC9770 /* Bracket.swift */; };
+		B86D8EF61EEA601F00A4AAB2 /* BracketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86D8EF41EEA601F00A4AAB2 /* BracketTests.swift */; };
 		B886D18F1EBE82C80046CA76 /* PresetPointCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B886D18E1EBE82C80046CA76 /* PresetPointCollectionCell.swift */; };
 		B888F9A01E6C67F90036A188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F99F1E6C67F90036A188 /* AppDelegate.swift */; };
 		B888F9A51E6C67F90036A188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B888F9A31E6C67F90036A188 /* Main.storyboard */; };
 		B888F9A71E6C67F90036A188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B888F9A61E6C67F90036A188 /* Assets.xcassets */; };
 		B888F9AA1E6C67F90036A188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B888F9A81E6C67F90036A188 /* LaunchScreen.storyboard */; };
-		B888F9B51E6C67F90036A188 /* Score_CenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9B41E6C67F90036A188 /* Score_CenterTests.swift */; };
-		B888F9C01E6C67F90036A188 /* Score_CenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9BF1E6C67F90036A188 /* Score_CenterUITests.swift */; };
 		B888F9D31E6E44290036A188 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9D21E6E44290036A188 /* Group.swift */; };
 		B888F9D61E6E45340036A188 /* GroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9D51E6E45340036A188 /* GroupService.swift */; };
 		B888F9D91E6E45CC0036A188 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B888F9D81E6E45CC0036A188 /* Date.swift */; };
@@ -46,7 +46,6 @@
 		B8AA1D641EB3222700CC552F /* AddPresetScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AA1D631EB3222700CC552F /* AddPresetScoreCell.swift */; };
 		B8B4C95E1EC554B900678619 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8B4C95D1EC554B900678619 /* Onboarding.storyboard */; };
 		B8B4C9611EC556B800678619 /* OnboardingMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4C9601EC556B800678619 /* OnboardingMessageVC.swift */; };
-		B8D4CD5D1EE4D13E00AC9770 /* Bracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4CD5C1EE4D13E00AC9770 /* Bracket.swift */; };
 		B8D4CD5F1EE4D27D00AC9770 /* BracketTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4CD5E1EE4D27D00AC9770 /* BracketTier.swift */; };
 		B8F216801EA9DA5100666917 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F2167F1EA9DA5100666917 /* Enums.swift */; };
 		B8F216821EA9DBE900666917 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F216811EA9DBE900666917 /* Protocols.swift */; };
@@ -62,14 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B888F9B11E6C67F90036A188 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B888F9941E6C67F90036A188 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B888F99B1E6C67F90036A188;
-			remoteInfo = "Score Center";
-		};
-		B888F9BC1E6C67F90036A188 /* PBXContainerItemProxy */ = {
+		B86D8EEE1EEA5F5400A4AAB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B888F9941E6C67F90036A188 /* Project object */;
 			proxyType = 1;
@@ -85,6 +77,9 @@
 		437BB26789A83520E453A978 /* Pods-Score CenterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Score CenterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Score CenterTests/Pods-Score CenterTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Score_CenterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7016213C0EE6B504DADED1CB /* Pods-Score CenterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Score CenterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Score CenterUITests/Pods-Score CenterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		833564A0F5A413979A5F5EC6 /* Pods-UnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88F01B1A5560EE8C1452EE7A /* Pods-UnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UnitTests/Pods-UnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		958CAAB6B7DB04C597EFC9F9 /* Pods_UnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B80006421EBD6CA500A7ADCA /* PresetPointsTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointsTableHeader.swift; sourceTree = "<group>"; };
 		B80DA39A1EA0612F00770317 /* RealmManagable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManagable.swift; sourceTree = "<group>"; };
 		B830B9AA1EAEDBE90075F481 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -105,6 +100,10 @@
 		B857DDDC1EA263A8003A00BF /* GroupHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupHeaderCell.swift; sourceTree = "<group>"; };
 		B857DDDD1EA263A8003A00BF /* GroupHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupHeaderCell.xib; sourceTree = "<group>"; };
 		B86571B61EE67282000ED4FC /* BracketMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketMatch.swift; sourceTree = "<group>"; };
+		B86D8EE91EEA5F5400A4AAB2 /* Score CenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Score CenterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B86D8EEB1EEA5F5400A4AAB2 /* Score_CenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score_CenterTests.swift; sourceTree = "<group>"; };
+		B86D8EED1EEA5F5400A4AAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B86D8EF41EEA601F00A4AAB2 /* BracketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BracketTests.swift; sourceTree = "<group>"; };
 		B886D18E1EBE82C80046CA76 /* PresetPointCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetPointCollectionCell.swift; sourceTree = "<group>"; };
 		B888F99C1E6C67F90036A188 /* Score Center.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Center.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B888F99F1E6C67F90036A188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,12 +111,6 @@
 		B888F9A61E6C67F90036A188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B888F9A91E6C67F90036A188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B888F9AB1E6C67F90036A188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B888F9B01E6C67F90036A188 /* Score CenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Score CenterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B888F9B41E6C67F90036A188 /* Score_CenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score_CenterTests.swift; sourceTree = "<group>"; };
-		B888F9B61E6C67F90036A188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B888F9BB1E6C67F90036A188 /* Score CenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Score CenterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B888F9BF1E6C67F90036A188 /* Score_CenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score_CenterUITests.swift; sourceTree = "<group>"; };
-		B888F9C11E6C67F90036A188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B888F9D21E6E44290036A188 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B888F9D51E6E45340036A188 /* GroupService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupService.swift; sourceTree = "<group>"; };
 		B888F9D81E6E45CC0036A188 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -146,27 +139,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B86D8EE61EEA5F5400A4AAB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB2B3852675DBE9C601EC39 /* Pods_Score_CenterTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B888F9991E6C67F90036A188 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B9009BE1413FDF8E5DE5AB47 /* Pods_Score_Center.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B888F9AD1E6C67F90036A188 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90813E85B2C7E67A6C90E9E3 /* Pods_Score_CenterTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B888F9B81E6C67F90036A188 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DAF1252E954D528E26B02C5 /* Pods_Score_CenterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,12 +187,21 @@
 			name = Groups;
 			sourceTree = "<group>";
 		};
+		B86D8EEA1EEA5F5400A4AAB2 /* Score CenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B86D8EEB1EEA5F5400A4AAB2 /* Score_CenterTests.swift */,
+				B86D8EED1EEA5F5400A4AAB2 /* Info.plist */,
+				B86D8EF41EEA601F00A4AAB2 /* BracketTests.swift */,
+			);
+			path = "Score CenterTests";
+			sourceTree = "<group>";
+		};
 		B888F9931E6C67F90036A188 = {
 			isa = PBXGroup;
 			children = (
 				B888F99E1E6C67F90036A188 /* Score Center */,
-				B888F9B31E6C67F90036A188 /* Score CenterTests */,
-				B888F9BE1E6C67F90036A188 /* Score CenterUITests */,
+				B86D8EEA1EEA5F5400A4AAB2 /* Score CenterTests */,
 				B888F99D1E6C67F90036A188 /* Products */,
 				EB5D53C55F17534FB0439414 /* Pods */,
 				F43000251E241F3A7017A78F /* Frameworks */,
@@ -218,8 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				B888F99C1E6C67F90036A188 /* Score Center.app */,
-				B888F9B01E6C67F90036A188 /* Score CenterTests.xctest */,
-				B888F9BB1E6C67F90036A188 /* Score CenterUITests.xctest */,
+				B86D8EE91EEA5F5400A4AAB2 /* Score CenterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,24 +231,6 @@
 				B888F9CD1E6C68000036A188 /* Supporting Files */,
 			);
 			path = "Score Center";
-			sourceTree = "<group>";
-		};
-		B888F9B31E6C67F90036A188 /* Score CenterTests */ = {
-			isa = PBXGroup;
-			children = (
-				B888F9B41E6C67F90036A188 /* Score_CenterTests.swift */,
-				B888F9B61E6C67F90036A188 /* Info.plist */,
-			);
-			path = "Score CenterTests";
-			sourceTree = "<group>";
-		};
-		B888F9BE1E6C67F90036A188 /* Score CenterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B888F9BF1E6C67F90036A188 /* Score_CenterUITests.swift */,
-				B888F9C11E6C67F90036A188 /* Info.plist */,
-			);
-			path = "Score CenterUITests";
 			sourceTree = "<group>";
 		};
 		B888F9CD1E6C68000036A188 /* Supporting Files */ = {
@@ -389,6 +364,8 @@
 				437BB26789A83520E453A978 /* Pods-Score CenterTests.release.xcconfig */,
 				D014E493AA1EA342DE6CF243 /* Pods-Score CenterUITests.debug.xcconfig */,
 				7016213C0EE6B504DADED1CB /* Pods-Score CenterUITests.release.xcconfig */,
+				833564A0F5A413979A5F5EC6 /* Pods-UnitTests.debug.xcconfig */,
+				88F01B1A5560EE8C1452EE7A /* Pods-UnitTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -399,6 +376,7 @@
 				263CBCAF54A84B7D598ACC4F /* Pods_Score_Center.framework */,
 				EA4FB1F44027D14AE223A14A /* Pods_Score_CenterTests.framework */,
 				5F83429111AA754A29C0089D /* Pods_Score_CenterUITests.framework */,
+				958CAAB6B7DB04C597EFC9F9 /* Pods_UnitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -406,6 +384,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B86D8EE81EEA5F5400A4AAB2 /* Score CenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B86D8EF01EEA5F5400A4AAB2 /* Build configuration list for PBXNativeTarget "Score CenterTests" */;
+			buildPhases = (
+				933B5F8BDB425E52EFBA1E94 /* [CP] Check Pods Manifest.lock */,
+				B86D8EE51EEA5F5400A4AAB2 /* Sources */,
+				B86D8EE61EEA5F5400A4AAB2 /* Frameworks */,
+				B86D8EE71EEA5F5400A4AAB2 /* Resources */,
+				1E4F86D75AADEAF6A114C32F /* [CP] Embed Pods Frameworks */,
+				9637E41BD0712C4F0D9D2EA5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B86D8EEF1EEA5F5400A4AAB2 /* PBXTargetDependency */,
+			);
+			name = "Score CenterTests";
+			productName = "Score CenterTests";
+			productReference = B86D8EE91EEA5F5400A4AAB2 /* Score CenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B888F99B1E6C67F90036A188 /* Score Center */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B888F9C41E6C67F90036A188 /* Build configuration list for PBXNativeTarget "Score Center" */;
@@ -426,74 +425,26 @@
 			productReference = B888F99C1E6C67F90036A188 /* Score Center.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B888F9AF1E6C67F90036A188 /* Score CenterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B888F9C71E6C67F90036A188 /* Build configuration list for PBXNativeTarget "Score CenterTests" */;
-			buildPhases = (
-				C189F27B35A5E14BD6FBF21F /* [CP] Check Pods Manifest.lock */,
-				B888F9AC1E6C67F90036A188 /* Sources */,
-				B888F9AD1E6C67F90036A188 /* Frameworks */,
-				B888F9AE1E6C67F90036A188 /* Resources */,
-				6F422A0365F0A1A20BE7B2B7 /* [CP] Embed Pods Frameworks */,
-				CCBFC9C1D42EDAA8CE921E8B /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B888F9B21E6C67F90036A188 /* PBXTargetDependency */,
-			);
-			name = "Score CenterTests";
-			productName = "Score CenterTests";
-			productReference = B888F9B01E6C67F90036A188 /* Score CenterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B888F9BA1E6C67F90036A188 /* Score CenterUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B888F9CA1E6C67F90036A188 /* Build configuration list for PBXNativeTarget "Score CenterUITests" */;
-			buildPhases = (
-				5ECA2EFFA03C7E253475C704 /* [CP] Check Pods Manifest.lock */,
-				B888F9B71E6C67F90036A188 /* Sources */,
-				B888F9B81E6C67F90036A188 /* Frameworks */,
-				B888F9B91E6C67F90036A188 /* Resources */,
-				EEA4CFDE48DE8B128BDC344B /* [CP] Embed Pods Frameworks */,
-				04FC8D75AC4AB19FF186FD6C /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B888F9BD1E6C67F90036A188 /* PBXTargetDependency */,
-			);
-			name = "Score CenterUITests";
-			productName = "Score CenterUITests";
-			productReference = B888F9BB1E6C67F90036A188 /* Score CenterUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B888F9941E6C67F90036A188 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = sptorres;
 				TargetAttributes = {
+					B86D8EE81EEA5F5400A4AAB2 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZC55HLSXNP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B888F99B1E6C67F90036A188;
+					};
 					B888F99B1E6C67F90036A188 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZC55HLSXNP;
 						ProvisioningStyle = Manual;
-					};
-					B888F9AF1E6C67F90036A188 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = ZC55HLSXNP;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B888F99B1E6C67F90036A188;
-					};
-					B888F9BA1E6C67F90036A188 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = ZC55HLSXNP;
-						ProvisioningStyle = Automatic;
-						TestTargetID = B888F99B1E6C67F90036A188;
 					};
 				};
 			};
@@ -511,13 +462,19 @@
 			projectRoot = "";
 			targets = (
 				B888F99B1E6C67F90036A188 /* Score Center */,
-				B888F9AF1E6C67F90036A188 /* Score CenterTests */,
-				B888F9BA1E6C67F90036A188 /* Score CenterUITests */,
+				B86D8EE81EEA5F5400A4AAB2 /* Score CenterTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B86D8EE71EEA5F5400A4AAB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B888F99A1E6C67F90036A188 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,38 +491,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B888F9AE1E6C67F90036A188 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B888F9B91E6C67F90036A188 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04FC8D75AC4AB19FF186FD6C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score CenterUITests/Pods-Score CenterUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0FB46F441141EFA208E4BBE9 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,7 +524,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score Center/Pods-Score Center-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5ECA2EFFA03C7E253475C704 /* [CP] Check Pods Manifest.lock */ = {
+		1E4F86D75AADEAF6A114C32F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score CenterTests/Pods-Score CenterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		933B5F8BDB425E52EFBA1E94 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -611,19 +554,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		6F422A0365F0A1A20BE7B2B7 /* [CP] Embed Pods Frameworks */ = {
+		9637E41BD0712C4F0D9D2EA5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score CenterTests/Pods-Score CenterTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score CenterTests/Pods-Score CenterTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE8752827C9AE324E74F6AB6 /* [CP] Check Pods Manifest.lock */ = {
@@ -641,58 +584,23 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C189F27B35A5E14BD6FBF21F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CCBFC9C1D42EDAA8CE921E8B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score CenterTests/Pods-Score CenterTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EEA4CFDE48DE8B128BDC344B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Score CenterUITests/Pods-Score CenterUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B86D8EE51EEA5F5400A4AAB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B86D8EF61EEA601F00A4AAB2 /* BracketTests.swift in Sources */,
+				B86D8EEC1EEA5F5400A4AAB2 /* Score_CenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B888F9981E6C67F90036A188 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86D8EF31EEA5FDD00A4AAB2 /* Bracket.swift in Sources */,
 				B8FC0E671EAB40480092D46F /* Extensions.swift in Sources */,
 				B830B9AE1EAEE9700075F481 /* ActiveGroupSettingsVC.swift in Sources */,
 				B80DA39B1EA0612F00770317 /* RealmManagable.swift in Sources */,
@@ -723,7 +631,6 @@
 				B8FC0E691EAB42D80092D46F /* GroupDetailTableViewManager.swift in Sources */,
 				B84BAFD01EA4930F00228B56 /* EditHeaderCell.swift in Sources */,
 				B831C3BD1E6E59340097A76B /* UIView.swift in Sources */,
-				B8D4CD5D1EE4D13E00AC9770 /* Bracket.swift in Sources */,
 				B888F9D91E6E45CC0036A188 /* Date.swift in Sources */,
 				B8515CAE1EB1DB0A00D95A14 /* PresetPointCell.swift in Sources */,
 				B831C3BF1E6E59F20097A76B /* UIColor.swift in Sources */,
@@ -734,34 +641,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B888F9AC1E6C67F90036A188 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B888F9B51E6C67F90036A188 /* Score_CenterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B888F9B71E6C67F90036A188 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B888F9C01E6C67F90036A188 /* Score_CenterUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B888F9B21E6C67F90036A188 /* PBXTargetDependency */ = {
+		B86D8EEF1EEA5F5400A4AAB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B888F99B1E6C67F90036A188 /* Score Center */;
-			targetProxy = B888F9B11E6C67F90036A188 /* PBXContainerItemProxy */;
-		};
-		B888F9BD1E6C67F90036A188 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B888F99B1E6C67F90036A188 /* Score Center */;
-			targetProxy = B888F9BC1E6C67F90036A188 /* PBXContainerItemProxy */;
+			targetProxy = B86D8EEE1EEA5F5400A4AAB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -785,6 +671,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B86D8EF11EEA5F5400A4AAB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBDE4A2BB2894F30DB2FEF87 /* Pods-Score CenterTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = ZC55HLSXNP;
+				INFOPLIST_FILE = "Score CenterTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-CenterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Score Center.app/Score Center";
+			};
+			name = Debug;
+		};
+		B86D8EF21EEA5F5400A4AAB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 437BB26789A83520E453A978 /* Pods-Score CenterTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = ZC55HLSXNP;
+				INFOPLIST_FILE = "Score CenterTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-CenterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Score Center.app/Score Center";
+			};
+			name = Release;
+		};
 		B888F9C21E6C67F90036A188 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -910,71 +830,18 @@
 			};
 			name = Release;
 		};
-		B888F9C81E6C67F90036A188 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBDE4A2BB2894F30DB2FEF87 /* Pods-Score CenterTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = ZC55HLSXNP;
-				INFOPLIST_FILE = "Score CenterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-CenterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Score Center.app/Score Center";
-			};
-			name = Debug;
-		};
-		B888F9C91E6C67F90036A188 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 437BB26789A83520E453A978 /* Pods-Score CenterTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = ZC55HLSXNP;
-				INFOPLIST_FILE = "Score CenterTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-CenterTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Score Center.app/Score Center";
-			};
-			name = Release;
-		};
-		B888F9CB1E6C67F90036A188 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D014E493AA1EA342DE6CF243 /* Pods-Score CenterUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = ZC55HLSXNP;
-				INFOPLIST_FILE = "Score CenterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-CenterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Score Center";
-			};
-			name = Debug;
-		};
-		B888F9CC1E6C67F90036A188 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7016213C0EE6B504DADED1CB /* Pods-Score CenterUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = ZC55HLSXNP;
-				INFOPLIST_FILE = "Score CenterUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "sptorres.Score-CenterUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = "Score Center";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B86D8EF01EEA5F5400A4AAB2 /* Build configuration list for PBXNativeTarget "Score CenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B86D8EF11EEA5F5400A4AAB2 /* Debug */,
+				B86D8EF21EEA5F5400A4AAB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B888F9971E6C67F90036A188 /* Build configuration list for PBXProject "Score Center" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -989,24 +856,6 @@
 			buildConfigurations = (
 				B888F9C51E6C67F90036A188 /* Debug */,
 				B888F9C61E6C67F90036A188 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B888F9C71E6C67F90036A188 /* Build configuration list for PBXNativeTarget "Score CenterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B888F9C81E6C67F90036A188 /* Debug */,
-				B888F9C91E6C67F90036A188 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B888F9CA1E6C67F90036A188 /* Build configuration list for PBXNativeTarget "Score CenterUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B888F9CB1E6C67F90036A188 /* Debug */,
-				B888F9CC1E6C67F90036A188 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
